@@ -1,4 +1,6 @@
-import Link from "next/link";
+'use client';
+
+import TransitionLink from "./components/TransitionLink";
 
 export default function Home() {
   return (
@@ -22,17 +24,17 @@ export default function Home() {
 
       {/* Right side - Navigation Links */}
       <div className="w-1/2 flex flex-col justify-center items-center pr-55 space-y-6">
-        <Link href="/works" className="content-reveal content-reveal-3 nav-link text-[12rem] pr-90 tracking-wider leading-none">
+        <TransitionLink href="/works" className="content-reveal content-reveal-3 nav-link text-[12rem] pr-90 tracking-wider leading-none">
           WORK
-        </Link>
+        </TransitionLink>
 
-        <Link href="/about" className="content-reveal content-reveal-4 nav-link text-[12rem] pr-65 tracking-wider leading-none">
+        <TransitionLink href="/about" className="content-reveal content-reveal-4 nav-link text-[12rem] pr-65 tracking-wider leading-none">
           ABOUT
-        </Link>
+        </TransitionLink>
 
-        <Link href="/contact" className="content-reveal content-reveal-5 nav-link text-[12rem] tracking-wider leading-none">
+        <TransitionLink href="/contact" className="content-reveal content-reveal-5 nav-link text-[12rem] tracking-wider leading-none">
           CONTACT
-        </Link>
+        </TransitionLink>
       </div>
     </div>
   );

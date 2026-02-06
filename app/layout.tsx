@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import DesktopNavigation from "./components/DesktopNavigation";
 import LoadingOverlay from "./components/LoadingOverlay";
+import { PageTransitionProvider } from "./components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,15 +36,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} antialiased`}
       >
-        <LoadingOverlay>
-          {/* Desktop Navigation */}
-          <DesktopNavigation />
-          
-          {/* Main Content */}
-          <div>
-            {children}
-          </div>
-        </LoadingOverlay>
+        <PageTransitionProvider>
+          <LoadingOverlay>
+            {/* Desktop Navigation */}
+            <DesktopNavigation />
+
+            {/* Main Content */}
+            <div>
+              {children}
+            </div>
+          </LoadingOverlay>
+        </PageTransitionProvider>
       </body>
     </html>
   );
