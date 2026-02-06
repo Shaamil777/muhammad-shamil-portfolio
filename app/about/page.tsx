@@ -9,13 +9,13 @@ export default function AboutPage() {
       <div className="about-content">
         {/* Left Section - Title and Notes */}
         <div className="about-left pl-30">
-          <h1 className="about-title font-cormorant content-reveal content-reveal-1">About</h1>
+          <h1 className="about-title font-cormorant content-reveal about-reveal-1">About</h1>
 
-          <h2 className="about-subtitle font-cormorant content-reveal content-reveal-2">
+          <h2 className="about-subtitle font-cormorant content-reveal about-reveal-2">
             I design and build full-stack web applications for real-world use.
           </h2>
 
-          <div className="about-notes content-reveal content-reveal-3">
+          <div className="about-notes content-reveal about-reveal-3">
             <p className="about-paragraph">
               I started building software in 2023, driven by curiosity and a determination to understand how the web works end to end. What began with learning core programming concepts and building small projects quickly turned into designing and developing real websites and applications. I wasn't interested in just learning syntax—I wanted to build things that actually worked and could be used by others.
             </p>
@@ -30,7 +30,7 @@ export default function AboutPage() {
           </div>
 
           {/* Quote Section */}
-          <div className="about-quote-section content-reveal content-reveal-4">
+          <div className="about-quote-section content-reveal about-reveal-4">
             <p className="about-quote-intro">
               This is how I approach building software:
             </p>
@@ -47,7 +47,7 @@ Every decision I make—architecture, features, performance—is driven by real 
           </div>
 
           {/* Experience Section */}
-          <div className="about-experience-section content-reveal content-reveal-5">
+          <div className="about-experience-section content-reveal about-reveal-5">
             <h3 className="about-section-title font-cormorant">Experience</h3>
             
             <div className="about-experience-item">
@@ -72,7 +72,7 @@ Every decision I make—architecture, features, performance—is driven by real 
           </div>
 
           {/* Skills Section */}
-          <div className="about-skills-section content-reveal content-reveal-6">
+          <div className="about-skills-section content-reveal about-reveal-6">
             <h3 className="about-section-title font-cormorant">Skills</h3>
             
             <p className="about-skills-list">
@@ -82,7 +82,7 @@ Every decision I make—architecture, features, performance—is driven by real 
         </div>
 
         {/* Right Section - Image */}
-        <div className="about-right content-reveal content-reveal-3">
+        <div className="about-right content-reveal about-reveal-3">
           <div className="about-image-container">
             <Image
               src="/about-profile.png"
