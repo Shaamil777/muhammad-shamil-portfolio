@@ -255,7 +255,7 @@ body {
     font-weight: 300;
     line-height: 1;
     margin-bottom: 40px;
-    color: #ffffff;
+    color: var(--framer-link-text-color, #ddd8af);
     letter-spacing: -2px;
   }
 
@@ -266,8 +266,8 @@ body {
     font-style: italic;
     line-height: 1.3;
     margin-bottom: 50px;
-    color: #ffffff;
-    max-width: 520px;
+    color: var(--framer-link-text-color, #ddd8af);
+    max-width: 800px;
   }
 
   /* Notes/paragraphs container */
@@ -315,6 +315,132 @@ body {
 
   .about-image:hover {
     filter: grayscale(0%) contrast(1.1) brightness(1.05);
+  }
+
+  /* Quote Section */
+  .about-quote-section {
+    margin-top: 80px;
+    padding-top: 0;
+  }
+
+  .about-quote-intro {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--framer-link-text-color, #ddd8af);
+    opacity: 0.8;
+    margin-bottom: 40px;
+  }
+
+  .about-quote {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--framer-link-text-color, #ddd8af);
+    margin: 0 0 40px 0;
+    padding-left: 0;
+    border-left: none;
+    opacity: 1;
+    max-width: 600px;
+  }
+
+  .about-quote-explanation {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--framer-link-text-color, #ddd8af);
+    opacity: 0.8;
+    margin-top: 0;
+    max-width: 600px;
+  }
+
+  /* Experience Section */
+  .about-experience-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(221, 216, 175, 0.2);
+  }
+
+  .about-section-title {
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 400;
+    color: var(--framer-link-text-color, #ddd8af);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+  }
+
+  .about-experience-item {
+    margin-bottom: 25px;
+  }
+
+  .about-experience-degree {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--framer-link-text-color, #ddd8af);
+    margin-bottom: 8px;
+  }
+
+  .about-experience-description {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--framer-link-text-color, #ddd8af);
+    opacity: 0.8;
+  }
+
+  .about-experience-summary {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--framer-link-text-color, #ddd8af);
+    margin: 25px 0 15px 0;
+    opacity: 0.85;
+  }
+
+  .about-experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-experience-list li {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--framer-link-text-color, #ddd8af);
+    opacity: 0.8;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .about-experience-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--framer-link-text-color, #ddd8af);
+    opacity: 0.6;
+  }
+
+  /* Skills Section */
+  .about-skills-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(221, 216, 175, 0.2);
+  }
+
+  .about-skills-list {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--framer-link-text-color, #ddd8af);
+    opacity: 0.85;
+    margin-top: 20px;
   }
 }
 
