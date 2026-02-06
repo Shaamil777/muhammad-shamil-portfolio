@@ -360,11 +360,6 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
-  .about-paragraph:hover {
-    opacity: 1;
-    transform: translateX(5px);
-  }
-
   /* Right section - Image */
   .about-right {
     display: flex;
@@ -390,9 +385,7 @@ body {
     filter: grayscale(0%) contrast(1.05);
   }
 
-  .about-image:hover {
-    filter: grayscale(0%) contrast(1.1) brightness(1.05);
-  }
+ 
 
   /* Quote Section */
   .about-quote-section {
@@ -423,10 +416,6 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  .about-quote:hover {
-    transform: translateX(10px);
-    opacity: 1;
-  }
 
   .about-quote-explanation {
     font-family: system-ui, -apple-system, sans-serif;
