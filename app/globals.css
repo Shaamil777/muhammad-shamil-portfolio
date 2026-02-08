@@ -258,6 +258,7 @@ body {
     transform: scale(0.95);
     filter: blur(8px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -271,6 +272,7 @@ body {
     transform: translateX(60px);
     filter: blur(8px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -385,7 +387,7 @@ body {
     filter: grayscale(0%) contrast(1.05);
   }
 
- 
+
 
   /* Quote Section */
   .about-quote-section {
