@@ -18,27 +18,27 @@ export default function Contact() {
       {/* Email */}
       <div className="contact-info content-reveal contact-reveal-3">
         <span className="contact-label">Email: </span>
-        <Link href="mailto:legendarywaller@gmail.com" className="contact-link">
-          legendarywaller@gmail.com
+        <Link href="mailto:shamilm2324@gmail.com" className="contact-link">
+          shamilm2324@gmail.com
         </Link>
       </div>
 
       {/* Social Links */}
       <div className="contact-info content-reveal contact-reveal-4">
         <span className="contact-label">On the Internet: </span>
-        <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+        <Link href="https://www.linkedin.com/in/muhammad-shamil-4b42a8329/" target="_blank" rel="noopener noreferrer" className="contact-link">
           Linkedin
         </Link>
         <span className="contact-separator"> / </span>
-        <Link href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="contact-link">
-          Dribbble
+        <Link href="https://www.instagram.com/_sh4mill/" target="_blank" rel="noopener noreferrer" className="contact-link">
+          Instagram
         </Link>
         <span className="contact-separator"> / </span>
-        <Link href="https://threads.net" target="_blank" rel="noopener noreferrer" className="contact-link">
+        <Link href="https://www.threads.com/@_sh4mill?xmt=AQF0cpeRAcMzY0Sqqa1BNsnG0lvOdskpK4zfjTuB21zFAgM" target="_blank" rel="noopener noreferrer" className="contact-link">
           Threads
         </Link>
         <span className="contact-separator"> / </span>
-        <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+        <Link href="https://github.com/Shaamil777" target="_blank" rel="noopener noreferrer" className="contact-link">
           Github
         </Link>
       </div>
