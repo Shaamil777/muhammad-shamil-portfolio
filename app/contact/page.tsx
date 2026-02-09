@@ -23,8 +23,21 @@ export default function Contact() {
         </Link>
       </div>
 
-      {/* Social Links */}
+      {/* WhatsApp */}
       <div className="contact-info content-reveal contact-reveal-4">
+        <span className="contact-label">WhatsApp: </span>
+        <Link
+          href="https://wa.me/916282763376?text=Hi%20Shamil!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project%20with%20you."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-link"
+        >
+          Message me on WhatsApp
+        </Link>
+      </div>
+
+      {/* Social Links */}
+      <div className="contact-info content-reveal contact-reveal-5">
         <span className="contact-label">On the Internet: </span>
         <Link href="https://www.linkedin.com/in/muhammad-shamil-4b42a8329/" target="_blank" rel="noopener noreferrer" className="contact-link">
           Linkedin

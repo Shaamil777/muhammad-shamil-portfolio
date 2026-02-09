@@ -584,6 +584,10 @@ body {
   animation-delay: 0.8s;
 }
 
+.contact-reveal-5 {
+  animation-delay: 1.0s;
+}
+
 /* Contact page container */
 .contact-container {
   min-height: 100vh;
