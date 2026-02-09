@@ -6,6 +6,13 @@ import TransitionLink from './TransitionLink';
 export default function DesktopNavigation() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const isContactPage = pathname === '/contact';
+
+  // Use dark colors on contact page (light background), white colors elsewhere
+  const textColor = isContactPage ? 'text-[#1a1a18]/60' : 'text-white/60';
+  const textHoverColor = isContactPage ? 'hover:text-[#1a1a18]' : 'hover:text-white';
+  const lineColor = isContactPage ? 'bg-[#1a1a18]/30' : 'bg-white/30';
+  const copyrightColor = isContactPage ? 'text-[#1a1a18]/40' : 'text-white/40';
 
   return (
     <div className="fixed left-4 top-8 z-50 flex flex-col items-center space-y-8">
@@ -60,17 +67,17 @@ export default function DesktopNavigation() {
         /* Home Link - Shown on all pages except home */
         <TransitionLink
           href="/"
-          className="text-white/60 hover:text-white transition-colors duration-200 text-xs font-light tracking-widest uppercase transform -rotate-90 whitespace-nowrap"
+          className={`${textColor} ${textHoverColor} transition-colors duration-200 text-xs font-light tracking-widest uppercase transform -rotate-90 whitespace-nowrap`}
         >
           Home
         </TransitionLink>
       )}
 
       {/* Vertical Line */}
-      <div className="w-px h-32 bg-white/30 mt-4"></div>
+      <div className={`w-px h-32 ${lineColor} mt-4`}></div>
 
       {/* Copyright */}
-      <div className="text-white/40 text-xs mt-4 transform -rotate-90 whitespace-nowrap">
+      <div className={`${copyrightColor} text-xs mt-4 transform -rotate-90 whitespace-nowrap`}>
         @2026
       </div>
     </div>

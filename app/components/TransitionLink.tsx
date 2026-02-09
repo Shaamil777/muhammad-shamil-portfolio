@@ -8,15 +8,16 @@ interface TransitionLinkProps {
     children: React.ReactNode;
     className?: string;
     color?: string;
+    direction?: 'down' | 'up';
 }
 
-export default function TransitionLink({ href, children, className, color }: TransitionLinkProps) {
+export default function TransitionLink({ href, children, className, color, direction }: TransitionLinkProps) {
     const { startTransition, isTransitioning } = usePageTransition();
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         if (!isTransitioning) {
-            startTransition(href, color);
+            startTransition(href, color, direction);
         }
     };
 

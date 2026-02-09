@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation';
 
 // Context to manage page transitions
 interface TransitionContextType {
-    startTransition: (href: string, color?: string) => void;
+    startTransition: (href: string, color?: string, direction?: 'down' | 'up') => void;
     isTransitioning: boolean;
 }
 
@@ -24,6 +24,14 @@ const pageColors: Record<string, string> = {
     '/': '#1a1a18',
 };
 
+// Define default directions for different pages
+const pageDirections: Record<string, 'down' | 'up'> = {
+    '/about': 'down',
+    '/works': 'down',
+    '/contact': 'up',
+    '/': 'down',
+};
+
 interface PageTransitionProviderProps {
     children: React.ReactNode;
 }
@@ -33,24 +41,36 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
     const pathname = usePathname();
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [transitionColor, setTransitionColor] = useState('#ddd8af');
-    const [overlayState, setOverlayState] = useState<'hidden' | 'entering' | 'covering' | 'exiting'>('hidden');
+    const [transitionDirection, setTransitionDirection] = useState<'down' | 'up'>('down');
+    // Added 'ready' state: positions overlay without animation before entering
+    const [overlayState, setOverlayState] = useState<'hidden' | 'ready' | 'entering' | 'covering' | 'exiting'>('hidden');
     const previousPathRef = useRef(pathname);
 
-    const startTransition = useCallback((href: string, color?: string) => {
+    const startTransition = useCallback((href: string, color?: string, direction?: 'down' | 'up') => {
         // Don't transition if already on the same page or already transitioning
         if (href === pathname || isTransitioning) return;
 
-        console.log('Starting transition to:', href);
+        const newDirection = direction || pageDirections[href] || 'down';
+        console.log('Starting transition to:', href, 'direction:', newDirection);
+
         setIsTransitioning(true);
         setTransitionColor(color || pageColors[href] || '#ddd8af');
-        setOverlayState('entering');
+        setTransitionDirection(newDirection);
+
+        // Set to 'ready' state first - this positions the overlay without animation
+        setOverlayState('ready');
+
+        // After overlay is positioned, trigger the entering animation
+        setTimeout(() => {
+            setOverlayState('entering');
+        }, 50);
 
         // After overlay covers the screen, navigate
         setTimeout(() => {
             console.log('Overlay covered, navigating...');
             setOverlayState('covering');
             router.push(href);
-        }, 600);
+        }, 700);
     }, [pathname, isTransitioning, router]);
 
     // Watch for pathname changes to trigger exit animation
@@ -81,9 +101,9 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
         <TransitionContext.Provider value={{ startTransition, isTransitioning }}>
             {children}
 
-            {/* Page Transition Overlay - slides DOWN from top, then continues DOWN to exit */}
+            {/* Page Transition Overlay - direction determines slide direction */}
             <div
-                className={`page-transition-overlay ${overlayState}`}
+                className={`page-transition-overlay page-transition-overlay-${transitionDirection} ${overlayState}`}
                 style={{
                     backgroundColor: transitionColor,
                 }}
