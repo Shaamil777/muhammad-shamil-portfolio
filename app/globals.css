@@ -904,7 +904,6 @@ body {
     min-height: 100vh;
     width: 100%;
     background-color: var(--token-e42f5e7f-eb84-44c9-935c-17b662e18b38, #1a1a18);
-    padding-left: 60px;
   }
 
   /* Not found state */
@@ -950,11 +949,14 @@ body {
   .pd-hero {
     padding: 140px 80px 80px 80px;
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   .pd-hero-inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 0;
   }
 
@@ -998,6 +1000,7 @@ body {
   .pd-badges {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
     margin-bottom: 28px;
   }
@@ -1040,6 +1043,7 @@ body {
   .pd-tech-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
     margin-bottom: 32px;
   }
@@ -1066,6 +1070,7 @@ body {
   .pd-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
   }
 
@@ -1109,7 +1114,8 @@ body {
   /* Visual Showcase Section */
   .pd-showcase {
     padding: 0 80px 80px 80px;
-    max-width: 1200px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
   .pd-showcase-featured {
@@ -1205,7 +1211,8 @@ body {
 
   /* Content wrapper */
   .pd-content-wrapper {
-    max-width: 900px;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 0 80px 0 80px;
   }
 
@@ -1641,20 +1648,16 @@ body {
    ======================================== */
 
 @media (max-width: 1024px) {
-  .pd-container {
-    padding-left: 40px;
-  }
-
   .pd-hero {
-    padding: 120px 60px 60px 40px;
+    padding: 120px 60px 60px 60px;
   }
 
   .pd-showcase {
-    padding: 0 60px 60px 40px;
+    padding: 0 60px 60px 60px;
   }
 
   .pd-content-wrapper {
-    padding: 0 60px 0 40px;
+    padding: 0 60px;
   }
 
   .pd-overview-grid {
@@ -1676,12 +1679,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  .pd-container {
-    padding-left: 40px;
-  }
 
   .pd-hero {
-    padding: 100px 24px 48px 16px;
+    padding: 100px 24px 48px 24px;
   }
 
   .pd-hero-title {
@@ -1702,7 +1702,7 @@ body {
   }
 
   .pd-showcase {
-    padding: 0 24px 48px 16px;
+    padding: 0 24px 48px 24px;
   }
 
   .pd-showcase-gallery {
@@ -1715,7 +1715,7 @@ body {
   }
 
   .pd-content-wrapper {
-    padding: 0 24px 0 16px;
+    padding: 0 24px;
   }
 
   .pd-section {

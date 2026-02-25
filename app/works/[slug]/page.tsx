@@ -144,51 +144,12 @@ export default function ProjectDetail() {
                     </div>
                 </section>
 
-                {/* 4. Problem / Challenge */}
-                <section className="pd-section" id="pd-problem">
-                    <div className="pd-section-header">
-                        <span className="pd-section-number">02</span>
-                        <h2 className="pd-section-title font-cormorant">Problem &amp; Challenge</h2>
-                    </div>
-                    <div className="pd-section-body">
-                        <p className="pd-body-text pd-problem-text">{project.problem.issue}</p>
-                        <div className="pd-constraints">
-                            <h4 className="pd-constraints-label">Key Constraints</h4>
-                            <ul className="pd-constraints-list">
-                                {project.problem.constraints.map((c, i) => (
-                                    <li key={i} className="pd-constraints-item">{c}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </section>
 
-                {/* 5. Solution & Approach */}
-                <section className="pd-section" id="pd-solution">
-                    <div className="pd-section-header">
-                        <span className="pd-section-number">03</span>
-                        <h2 className="pd-section-title font-cormorant">Solution &amp; Approach</h2>
-                    </div>
-                    <div className="pd-section-body">
-                        <p className="pd-body-text">{project.solution.approach}</p>
-                        <div className="pd-decisions">
-                            <h4 className="pd-constraints-label">Key Decisions</h4>
-                            <div className="pd-decisions-grid">
-                                {project.solution.decisions.map((d, i) => (
-                                    <div key={i} className="pd-decision-card">
-                                        <span className="pd-decision-index">{String(i + 1).padStart(2, '0')}</span>
-                                        <p className="pd-decision-text">{d}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* 6. Key Features */}
                 <section className="pd-section" id="pd-features">
                     <div className="pd-section-header">
-                        <span className="pd-section-number">04</span>
+                        <span className="pd-section-number">02</span>
                         <h2 className="pd-section-title font-cormorant">Key Features</h2>
                     </div>
                     <div className="pd-section-body">
@@ -207,7 +168,7 @@ export default function ProjectDetail() {
                 {/* 7. Technology Stack */}
                 <section className="pd-section" id="pd-stack">
                     <div className="pd-section-header">
-                        <span className="pd-section-number">05</span>
+                        <span className="pd-section-number">03</span>
                         <h2 className="pd-section-title font-cormorant">Technology Stack</h2>
                     </div>
                     <div className="pd-section-body">
@@ -231,46 +192,7 @@ export default function ProjectDetail() {
                     </div>
                 </section>
 
-                {/* 8. Results / Impact */}
-                <section className="pd-section" id="pd-results">
-                    <div className="pd-section-header">
-                        <span className="pd-section-number">06</span>
-                        <h2 className="pd-section-title font-cormorant">Results &amp; Impact</h2>
-                    </div>
-                    <div className="pd-section-body">
-                        <div className="pd-results-grid">
-                            {project.results.map((r, i) => (
-                                <div key={i} className="pd-result-card">
-                                    <h3 className="pd-result-metric font-cormorant">{r.metric}</h3>
-                                    <p className="pd-result-desc">{r.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
-                {/* 9. Lessons Learned */}
-                {project.lessons.length > 0 && (
-                    <section className="pd-section" id="pd-lessons">
-                        <div className="pd-section-header">
-                            <span className="pd-section-number">07</span>
-                            <h2 className="pd-section-title font-cormorant">Lessons &amp; Highlights</h2>
-                        </div>
-                        <div className="pd-section-body">
-                            <div className="pd-lessons-list">
-                                {project.lessons.map((l, i) => (
-                                    <div key={i} className="pd-lesson-item">
-                                        <div className="pd-lesson-marker">
-                                            <div className="pd-lesson-dot" />
-                                            {i < project.lessons.length - 1 && <div className="pd-lesson-line" />}
-                                        </div>
-                                        <p className="pd-lesson-text">{l}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                )}
 
                 {/* 10. Project Navigation */}
                 <section className="pd-navigation" id="pd-navigation">

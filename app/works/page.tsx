@@ -3,10 +3,11 @@
 import TransitionLink from '../components/TransitionLink';
 
 const projects = [
-  { name: 'WARD', slug: 'ward', category: 'FULL-STACK DEVELOPMENT' },
-  { name: 'SUPERLINK', slug: 'superlink', category: 'SAAS DEVELOPMENT' },
-  { name: 'OKALPHA', slug: 'okalpha', category: 'FRONTEND DEVELOPMENT' },
-  { name: 'KAROO', slug: 'karoo', category: 'MOBILE DEVELOPMENT' }
+  { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT' },
+  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY' },
+  { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY' },
+  { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES' },
+  { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT' }
 ];
 
 export default function Works() {

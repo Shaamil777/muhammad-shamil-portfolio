@@ -14,14 +14,6 @@ export interface ProjectData {
         audience: string;
         goal: string;
     };
-    problem: {
-        issue: string;
-        constraints: string[];
-    };
-    solution: {
-        approach: string;
-        decisions: string[];
-    };
     features: { icon: string; title: string; description: string }[];
     stack: {
         frontend: string[];
@@ -30,8 +22,6 @@ export interface ProjectData {
         apis: string[];
         tools: string[];
     };
-    results: { metric: string; description: string }[];
-    lessons: string[];
     navigation: {
         prev: { title: string; slug: string } | null;
         next: { title: string; slug: string } | null;
@@ -39,204 +29,257 @@ export interface ProjectData {
 }
 
 const projects: Record<string, ProjectData> = {
-    ward: {
-        slug: 'ward',
-        title: 'WARD',
-        summary:
-            'A full-stack food delivery platform built for a local restaurant chain, featuring real-time order tracking, restaurant management dashboard, and seamless payment integration.',
+    urbanworn: {
+        slug: "urbanworn",
+        title: "UrbanWorn",
+        summary: "A full-stack e-commerce platform for fashion retail with comprehensive user management, product catalog, order processing, and admin dashboard.",
         badges: [
-            { label: 'Role', value: 'Full-Stack Developer' },
-            { label: 'Timeline', value: '6 Weeks' },
-            { label: 'Client', value: 'Restaurant Chain' },
-            { label: 'Status', value: 'Live' },
+            { label: "Type", value: "E-commerce Platform" },
+            { label: "Role", value: "Full Stack Developer" },
+            { label: "Timeline", value: "2024" },
+            { label: "Status", value: "Completed" }
         ],
-        techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Socket.io', 'Razorpay'],
+        techStack: [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "EJS",
+            "JavaScript",
+            "CSS3",
+            "HTML5",
+            "Razorpay",
+            "Passport.js",
+            "Multer"
+        ],
         actions: [
-            { label: 'Live Demo', href: '#', type: 'primary' },
-            { label: 'GitHub', href: '#', type: 'secondary' },
-            { label: 'Case Study', href: '#', type: 'secondary' },
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
         ],
-        heroImage: '/project-hero.png',
+        heroImage: "/public/images/urbanworn-hero.jpg",
         gallery: [
-            { src: '/project-desktop-1.png', alt: 'Dashboard overview', type: 'desktop' },
-            { src: '/project-desktop-2.png', alt: 'Order management panel', type: 'desktop' },
-            { src: '/project-mobile-1.png', alt: 'Mobile menu view', type: 'mobile' },
-            { src: '/project-mobile-2.png', alt: 'Mobile cart and checkout', type: 'mobile' },
+            { src: "/public/images/dashboard.jpg", alt: "Admin Dashboard", type: "desktop" },
+            { src: "/public/images/shop.jpg", alt: "Product Catalog", type: "desktop" },
+            { src: "/public/images/cart.jpg", alt: "Shopping Cart", type: "mobile" },
+            { src: "/public/images/checkout.jpg", alt: "Checkout Process", type: "desktop" }
         ],
         overview: {
-            description:
-                'Ward is a complete food delivery platform that connects customers with local restaurants. It provides a streamlined ordering experience on the frontend and a powerful management dashboard for restaurant owners on the backend.',
-            audience:
-                'Built for a restaurant chain with 4 outlets looking to digitize their ordering process and reduce dependency on third-party delivery apps.',
-            goal:
-                'Reduce order processing time by 60%, eliminate third-party commission fees, and provide direct customer data ownership to the business.',
-        },
-        problem: {
-            issue:
-                'The client was losing 25-30% of revenue to third-party delivery platforms and had no direct relationship with their customers. Order errors were frequent due to phone-based ordering, and there was zero visibility into business analytics.',
-            constraints: [
-                'Must handle 200+ concurrent orders during peak hours',
-                'Integration with existing POS system required',
-                'Mobile-first design for delivery staff interface',
-                'Budget-conscious — single developer delivery',
-            ],
-        },
-        solution: {
-            approach:
-                'Built a custom MERN stack platform with real-time WebSocket communication for instant order updates. Designed a role-based architecture supporting customers, restaurant admins, and delivery personnel with separate optimized interfaces.',
-            decisions: [
-                'Chose MongoDB for flexible menu schema that varies across restaurant locations',
-                'Implemented Socket.io for real-time order tracking instead of polling',
-                'Used Razorpay for payment processing with automatic split payments to outlets',
-                'Built a Progressive Web App for delivery staff to avoid app store dependencies',
-            ],
+            description: "UrbanWorn is a comprehensive fashion e-commerce platform built with Node.js and MongoDB. It features a complete shopping experience with user authentication, product management, shopping cart, order processing, payment integration, and an admin dashboard for business management.",
+            audience: "Fashion retailers, online shoppers, and e-commerce businesses looking for a complete digital storefront solution.",
+            goal: "To create a scalable, user-friendly e-commerce platform that handles the complete online shopping lifecycle from product browsing to order fulfillment."
         },
         features: [
             {
-                icon: '🛒',
-                title: 'Smart Ordering System',
-                description: 'Location-aware menu display with real-time availability, cart persistence, and scheduled ordering.',
+                icon: "👤",
+                title: "User Authentication & Management",
+                description: "Secure user registration, login with Google OAuth integration, profile management, and address book functionality."
             },
             {
-                icon: '📊',
-                title: 'Restaurant Dashboard',
-                description: 'Complete admin panel with order management, menu editing, analytics, and revenue tracking.',
+                icon: "🛍️",
+                title: "Product Catalog & Search",
+                description: "Comprehensive product management with categories, detailed product pages, image galleries, and advanced filtering options."
             },
             {
-                icon: '🔔',
-                title: 'Real-Time Notifications',
-                description: 'Instant order status updates via WebSockets for customers, restaurants, and delivery staff.',
+                icon: "🛒",
+                title: "Shopping Cart & Wishlist",
+                description: "Persistent shopping cart, wishlist functionality, and seamless product quantity management across sessions."
             },
             {
-                icon: '💳',
-                title: 'Payment Integration',
-                description: 'Secure checkout with Razorpay supporting UPI, cards, wallets, and automatic split settlements.',
+                icon: "💳",
+                title: "Payment Integration",
+                description: "Multiple payment options including Cash on Delivery and Razorpay integration for secure online payments."
             },
             {
-                icon: '🗺️',
-                title: 'Delivery Tracking',
-                description: 'Live delivery tracking with estimated delivery time and delivery personnel assignment.',
+                icon: "📦",
+                title: "Order Management",
+                description: "Complete order lifecycle management with status tracking, order history, and return/refund processing."
             },
             {
-                icon: '📱',
-                title: 'Mobile-First PWA',
-                description: 'Responsive Progressive Web App optimized for delivery staff with offline order caching.',
+                icon: "🎟️",
+                title: "Coupon & Offers System",
+                description: "Dynamic coupon management with percentage discounts, minimum order values, and time-based validity."
             },
+            {
+                icon: "💰",
+                title: "Digital Wallet",
+                description: "Built-in wallet system for refunds, credits, and transaction history with detailed financial tracking."
+            },
+            {
+                icon: "📊",
+                title: "Admin Dashboard",
+                description: "Comprehensive admin panel for user management, product catalog, order processing, and sales reporting."
+            },
+            {
+                icon: "📧",
+                title: "Email Integration",
+                description: "Automated email notifications for OTP verification, order confirmations, and account management."
+            },
+            {
+                icon: "📱",
+                title: "Responsive Design",
+                description: "Mobile-first responsive design ensuring optimal user experience across all devices and screen sizes."
+            }
         ],
         stack: {
-            frontend: ['React 18', 'Next.js 14', 'Tailwind CSS', 'Framer Motion'],
-            backend: ['Node.js', 'Express.js', 'Socket.io', 'JWT Auth'],
-            database: ['MongoDB', 'Mongoose', 'Redis (caching)'],
-            apis: ['Razorpay API', 'Google Maps API', 'Twilio SMS', 'Cloudinary'],
-            tools: ['Git', 'Vercel', 'Render', 'Postman', 'MongoDB Atlas'],
+            frontend: [
+                "EJS (Embedded JavaScript Templates)",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "Bootstrap",
+                "Responsive Design"
+            ],
+            backend: [
+                "Node.js",
+                "Express.js",
+                "Express Session",
+                "Passport.js (Google OAuth)",
+                "Bcrypt (Password Hashing)",
+                "Node-cron (Scheduled Tasks)"
+            ],
+            database: [
+                "MongoDB",
+                "Mongoose ODM"
+            ],
+            apis: [
+                "Razorpay Payment Gateway",
+                "Google OAuth 2.0",
+                "Nodemailer (Email Service)",
+                "RESTful API Architecture"
+            ],
+            tools: [
+                "Multer (File Upload)",
+                "PDFKit (Invoice Generation)",
+                "Moment.js (Date Handling)",
+                "Nodemon (Development)",
+                "Dotenv (Environment Variables)"
+            ]
         },
-        results: [
-            { metric: '60% Faster Orders', description: 'Average order processing time reduced from 8 minutes to under 3 minutes.' },
-            { metric: '₹2.4L Saved Monthly', description: 'Eliminated third-party platform commissions across all 4 outlets.' },
-            { metric: '1,200+ Orders/Week', description: 'Platform handles over 1,200 orders weekly with 99.8% uptime.' },
-            { metric: '4.8★ User Rating', description: 'Average customer satisfaction rating based on in-app feedback.' },
-        ],
-        lessons: [
-            'Learned to architect systems for high concurrency — Socket.io connection pooling was critical for peak hours.',
-            'Early investment in a flexible database schema saved weeks of refactoring when new outlets were onboarded.',
-            'Building the delivery staff PWA first (before customer-facing features) revealed key UX assumptions that were wrong.',
-        ],
         navigation: {
             prev: null,
-            next: { title: 'SUPERLINK', slug: 'superlink' },
-        },
+            next: { title: 'OPEN DOOR   ', slug: 'opendoor' }
+        }
     },
 
-    superlink: {
-        slug: 'superlink',
-        title: 'SUPERLINK',
-        summary:
-            'A SaaS link management platform with branded short links, click analytics, QR code generation, and team collaboration features.',
+
+    opendoor: {
+        slug: "opendoor",
+        title: "Open Door",
+        summary: "A comprehensive educational consultancy platform that helps students discover and apply to colleges across various academic disciplines with expert guidance and streamlined application processes.",
         badges: [
-            { label: 'Role', value: 'Full-Stack Developer' },
-            { label: 'Timeline', value: '4 Weeks' },
-            { label: 'Client', value: 'Personal Project' },
-            { label: 'Status', value: 'Live' },
+            { label: "Type", value: "Educational Platform" },
+            { label: "Role", value: "Full Stack Developer" },
+            { label: "Timeline", value: "2024" },
+            { label: "Status", value: "Completed" }
         ],
-        techStack: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS', 'Chart.js'],
+        techStack: [
+            "Node.js",
+            "Express.js",
+            "EJS",
+            "JavaScript",
+            "CSS3",
+            "HTML5",
+            "Nodemailer",
+            "Bootstrap",
+            "AOS (Animate On Scroll)"
+        ],
         actions: [
-            { label: 'Live Demo', href: '#', type: 'primary' },
-            { label: 'GitHub', href: '#', type: 'secondary' },
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
         ],
-        heroImage: '/project-hero.png',
+        heroImage: "/public/assets/OPEN DOOR LOGO 1 CIRCLE.png",
         gallery: [
-            { src: '/project-desktop-1.png', alt: 'Link dashboard', type: 'desktop' },
-            { src: '/project-mobile-1.png', alt: 'Mobile analytics view', type: 'mobile' },
+            { src: "/public/assets/about.webp", alt: "About Page", type: "desktop" },
+            { src: "/public/assets/courses.webp", alt: "Course Catalog", type: "desktop" },
+            { src: "/public/assets/colleges.webp", alt: "College Directory", type: "desktop" },
+            { src: "/public/assets/form.webp", alt: "Student Registration", type: "mobile" }
         ],
         overview: {
-            description:
-                'Superlink is a link management tool that allows users to create branded short URLs, track click analytics in real time, and generate QR codes — all from a single dashboard.',
-            audience:
-                'Designed for marketers, content creators, and small businesses who need link tracking without enterprise-level pricing.',
-            goal:
-                'Demonstrate full-stack proficiency with a production-grade SaaS product, including authentication, role-based access, and real-time data visualization.',
-        },
-        problem: {
-            issue:
-                'Existing link shorteners either lack analytics depth or charge premium prices. Small businesses and freelancers need a simple, affordable solution with branded link support.',
-            constraints: [
-                'Must support custom domains for branded links',
-                'Analytics must update in real time without page reload',
-                'Free tier must be genuinely useful, not just a teaser',
-            ],
-        },
-        solution: {
-            approach:
-                'Built a Next.js application with server-side rendering for SEO, MongoDB for flexible analytics storage, and Chart.js for interactive data visualization.',
-            decisions: [
-                'Used Next.js API routes to keep everything in a single deployable unit',
-                'Implemented click tracking as non-blocking background jobs',
-                'Chose MongoDB for its flexible document model suited to varying analytics schemas',
-            ],
+            description: "Open Door Educations is a comprehensive educational consultancy platform built with Node.js and EJS templating. It provides students with access to extensive course catalogs across multiple disciplines, college information, and streamlined application processes. The platform features detailed course information, college partnerships, and automated email communication for student inquiries.",
+            audience: "Students seeking higher education opportunities, educational consultants, colleges and universities looking to connect with prospective students.",
+            goal: "To simplify the college selection and application process by providing comprehensive information about courses, colleges, and facilitating direct communication between students and educational institutions."
         },
         features: [
             {
-                icon: '🔗',
-                title: 'Branded Short Links',
-                description: 'Create short URLs with custom slugs and optional custom domains.',
+                icon: "🎓",
+                title: "Comprehensive Course Catalog",
+                description: "Extensive database of undergraduate and postgraduate courses across 5 major disciplines: Business & Management, Engineering & Technology, Creative Arts & Design, Law & Humanities, and Medical & Healthcare."
             },
             {
-                icon: '📈',
-                title: 'Real-Time Analytics',
-                description: 'Track clicks, referrers, devices, locations, and time-based patterns.',
+                icon: "🏫",
+                title: "College Directory & Partnerships",
+                description: "Detailed information about partner colleges across major Indian cities including Bangalore, Chennai, Coimbatore, Kerala, and Mangalore with institutional profiles and program offerings."
             },
             {
-                icon: '📲',
-                title: 'QR Code Generator',
-                description: 'Auto-generate downloadable QR codes for any shortened link.',
+                icon: "📝",
+                title: "Student Registration System",
+                description: "Streamlined registration form with comprehensive student information collection, program selection, and preferred college choices with real-time validation."
             },
             {
-                icon: '👥',
-                title: 'Team Workspaces',
-                description: 'Invite team members with role-based permissions to manage links collaboratively.',
+                icon: "📧",
+                title: "Automated Email Communication",
+                description: "Professional email notifications sent to administrators upon student registration with detailed student information and course preferences for follow-up."
             },
+            {
+                icon: "🎨",
+                title: "Interactive User Interface",
+                description: "Modern, responsive design with smooth animations, loading screens, and intuitive navigation across all device types for optimal user experience."
+            },
+            {
+                icon: "🔍",
+                title: "Advanced Course Filtering",
+                description: "Categorized course browsing with detailed program information, duration, specializations, and career prospects for informed decision-making."
+            },
+            {
+                icon: "📱",
+                title: "Mobile-First Design",
+                description: "Fully responsive platform optimized for mobile devices with touch-friendly interfaces and fast loading times across all screen sizes."
+            },
+            {
+                icon: "🌟",
+                title: "Professional Branding",
+                description: "Cohesive brand identity with professional logo design, consistent color schemes, and polished visual elements throughout the platform."
+            }
         ],
         stack: {
-            frontend: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Chart.js'],
-            backend: ['Next.js API Routes', 'JWT Auth', 'Rate Limiting'],
-            database: ['MongoDB', 'Mongoose'],
-            apis: ['QR Code API', 'GeoIP Lookup'],
-            tools: ['Git', 'Vercel', 'MongoDB Atlas', 'Postman'],
+            frontend: [
+                "EJS (Embedded JavaScript Templates)",
+                "CSS3 with Custom Animations",
+                "JavaScript (ES6+)",
+                "Bootstrap Framework",
+                "AOS (Animate On Scroll Library)",
+                "Responsive Grid System"
+            ],
+            backend: [
+                "Node.js Runtime Environment",
+                "Express.js Web Framework",
+                "Express Session Management",
+                "CORS (Cross-Origin Resource Sharing)",
+                "Path Module for File Handling"
+            ],
+            database: [
+                "JSON-based Data Storage",
+                "Static Asset Management",
+                "File System Operations"
+            ],
+            apis: [
+                "Nodemailer (Email Service)",
+                "Gmail SMTP Integration",
+                "RESTful API Architecture",
+                "Form Data Processing"
+            ],
+            tools: [
+                "Nodemon (Development Server)",
+                "Dotenv (Environment Variables)",
+                "Static File Serving",
+                "Template Engine Integration",
+                "Asset Optimization"
+            ]
         },
-        results: [
-            { metric: 'Production-Ready SaaS', description: 'Fully functional product with auth, billing logic, and analytics.' },
-            { metric: '50ms Avg Response', description: 'Optimized redirect latency for shortened URLs.' },
-            { metric: 'Open Source', description: 'Starred on GitHub as a reference MERN SaaS implementation.' },
-        ],
-        lessons: [
-            'Non-blocking analytics writes were essential — initial synchronous approach caused redirect delays.',
-            'Building a free tier that is genuinely useful increased signups significantly compared to a locked-down trial.',
-        ],
         navigation: {
-            prev: { title: 'WARD', slug: 'ward' },
-            next: { title: 'OKALPHA', slug: 'okalpha' },
-        },
+            prev: { slug: 'urbanworn', title: 'URBANWORN' },
+            next: { slug: 'okalpha', title: 'OKALPHA' }
+        }
     },
+
 
     okalpha: {
         slug: 'okalpha',
@@ -267,24 +310,7 @@ const projects: Record<string, ProjectData> = {
             goal:
                 'Increase consultation bookings by 40% and establish a cohesive brand identity online.',
         },
-        problem: {
-            issue:
-                'The agency relied on social media and word-of-mouth for leads. They had no website, no portfolio, and no way for potential clients to understand their services or book a call.',
-            constraints: [
-                'The design must reflect the agency\'s premium branding and creative identity',
-                'Booking system must integrate with the existing Calendly workflow',
-                'Site must load fast and perform well for SEO',
-            ],
-        },
-        solution: {
-            approach:
-                'Designed and developed a visually rich Next.js website with smooth scroll animations, dynamic project galleries, and embedded Calendly scheduling — all optimized for performance and SEO.',
-            decisions: [
-                'Used Framer Motion for scroll-triggered animations that showcase agency projects elegantly',
-                'Implemented ISR (Incremental Static Regeneration) for project pages to balance performance and freshness',
-                'Integrated Calendly embed widget for a frictionless booking experience without leaving the site',
-            ],
-        },
+
         features: [
             {
                 icon: '🎨',
@@ -314,15 +340,7 @@ const projects: Record<string, ProjectData> = {
             apis: ['Calendly API', 'Cloudinary'],
             tools: ['Git', 'Vercel', 'Figma'],
         },
-        results: [
-            { metric: '45% More Bookings', description: 'Consultation requests increased significantly within the first month.' },
-            { metric: '95+ Lighthouse Score', description: 'Optimized performance, accessibility, and SEO out of the box.' },
-            { metric: '3.2s Avg Session', description: 'Strong engagement with average visitor session exceeding 3 minutes.' },
-        ],
-        lessons: [
-            'Scroll-based animations need careful performance profiling — initial Framer Motion usage caused jank on mid-range devices.',
-            'Calendly embed load time affected perceived performance; lazy-loading it below the fold solved this.',
-        ],
+
         navigation: {
             prev: { title: 'SUPERLINK', slug: 'superlink' },
             next: { title: 'KAROO', slug: 'karoo' },
@@ -358,26 +376,7 @@ const projects: Record<string, ProjectData> = {
             goal:
                 'Create a secure, regulation-ready mobile app that simplifies crypto-to-fiat exchange for everyday users.',
         },
-        problem: {
-            issue:
-                'Existing crypto exchange apps are complex and intimidating for average users. The target market needed a simple, mobile-first solution with local bank integration and compliance-ready KYC.',
-            constraints: [
-                'Must comply with Indian financial regulations and KYC requirements',
-                'Real-time exchange rates with minimal latency',
-                'Secure handling of sensitive financial and identity data',
-                'Cross-platform support (iOS and Android) with a single codebase',
-            ],
-        },
-        solution: {
-            approach:
-                'Developed a React Native application using Expo for cross-platform support, with a Node.js/Express backend handling authentication, KYC verification, and real-time rate fetching from CoinGecko API.',
-            decisions: [
-                'Chose React Native with Expo for rapid cross-platform development',
-                'Implemented JWT-based authentication with refresh token rotation for security',
-                'Used CoinGecko API for live exchange rate data with local caching to reduce API calls',
-                'Built modular screen architecture for easy addition of new crypto pairs',
-            ],
-        },
+
         features: [
             {
                 icon: '💱',
@@ -412,16 +411,7 @@ const projects: Record<string, ProjectData> = {
             apis: ['CoinGecko API', 'Bank Verification API'],
             tools: ['Git', 'Expo Go', 'Postman', 'MongoDB Atlas'],
         },
-        results: [
-            { metric: 'Cross-Platform MVP', description: 'Single codebase running on both iOS and Android via Expo.' },
-            { metric: 'Real-Time Rates', description: 'Sub-second rate updates with intelligent caching layer.' },
-            { metric: 'Compliance Ready', description: 'Full KYC flow built to Indian regulatory requirements.' },
-        ],
-        lessons: [
-            'Financial app UX needs extreme simplification — early prototypes with too many options confused test users.',
-            'Rate caching strategy was critical; without it, CoinGecko rate limits were hit within minutes of testing.',
-            'Building the bank management module as a standalone tab improved both UX and code modularity.',
-        ],
+
         navigation: {
             prev: { title: 'OKALPHA', slug: 'okalpha' },
             next: null,
