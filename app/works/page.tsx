@@ -1,16 +1,12 @@
 'use client';
 
-import Link from 'next/link';
+import TransitionLink from '../components/TransitionLink';
 
 const projects = [
-  { name: 'WARD', category: 'WEBFLOW DEVELOPMENT' },
-  { name: 'SUPERLINK', category: 'FRAMER DEVELOPMENT' },
-  { name: 'OKALPHA', category: 'WEBFLOW DEVELOPMENT' },
-  { name: 'KAROO', category: 'WEBFLOW DEVELOPMENT' },
-  { name: 'KAROO', category: 'WEBFLOW DEVELOPMENT' },
-  { name: 'KAROO', category: 'WEBFLOW DEVELOPMENT' },
-  { name: 'KAROO', category: 'WEBFLOW DEVELOPMENT' },
-  { name: 'KAROO', category: 'WEBFLOW DEVELOPMENT' },
+  { name: 'WARD', slug: 'ward', category: 'FULL-STACK DEVELOPMENT' },
+  { name: 'SUPERLINK', slug: 'superlink', category: 'SAAS DEVELOPMENT' },
+  { name: 'OKALPHA', slug: 'okalpha', category: 'FRONTEND DEVELOPMENT' },
+  { name: 'KAROO', slug: 'karoo', category: 'MOBILE DEVELOPMENT' }
 ];
 
 export default function Works() {
@@ -35,10 +31,10 @@ export default function Works() {
       {/* Right side - Project Names */}
       <div className="works-right">
         {projects.map((project, index) => (
-          <div key={project.name} className={`works-project-item content-reveal works-reveal-${index + 1}`}>
-            <Link href="#" className="works-project-name font-cormorant">
+          <div key={project.slug} className={`works-project-item content-reveal works-reveal-${index + 1}`}>
+            <TransitionLink href={`/works/${project.slug}`} className="works-project-name font-cormorant">
               {project.name}
-            </Link>
+            </TransitionLink>
             <span className="works-project-category">– {project.category}</span>
           </div>
         ))}

@@ -50,11 +50,16 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
         // Don't transition if already on the same page or already transitioning
         if (href === pathname || isTransitioning) return;
 
-        const newDirection = direction || pageDirections[href] || 'down';
+        // Handle dynamic project detail routes
+        const isProjectDetail = href.startsWith('/works/') && href !== '/works';
+        const defaultColor = isProjectDetail ? '#1a1a18' : (pageColors[href] || '#ddd8af');
+        const defaultDirection = isProjectDetail ? 'down' : (pageDirections[href] || 'down');
+
+        const newDirection = direction || defaultDirection;
         console.log('Starting transition to:', href, 'direction:', newDirection);
 
         setIsTransitioning(true);
-        setTransitionColor(color || pageColors[href] || '#ddd8af');
+        setTransitionColor(color || defaultColor);
         setTransitionDirection(newDirection);
 
         // Set to 'ready' state first - this positions the overlay without animation

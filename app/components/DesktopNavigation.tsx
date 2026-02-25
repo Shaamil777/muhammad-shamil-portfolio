@@ -6,7 +6,8 @@ import TransitionLink from './TransitionLink';
 export default function DesktopNavigation() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-  const isLightBgPage = pathname === '/contact' || pathname === '/works';
+  const isProjectDetail = pathname.startsWith('/works/');
+  const isLightBgPage = (pathname === '/contact' || pathname === '/works') && !isProjectDetail;
 
   // Use dark colors on light background pages (contact, works), white colors elsewhere
   const textColor = isLightBgPage ? 'text-[#1a1a18]/60' : 'text-white/60';
