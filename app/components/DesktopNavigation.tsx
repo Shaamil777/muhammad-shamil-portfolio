@@ -6,13 +6,13 @@ import TransitionLink from './TransitionLink';
 export default function DesktopNavigation() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-  const isContactPage = pathname === '/contact';
+  const isLightBgPage = pathname === '/contact' || pathname === '/works';
 
-  // Use dark colors on contact page (light background), white colors elsewhere
-  const textColor = isContactPage ? 'text-[#1a1a18]/60' : 'text-white/60';
-  const textHoverColor = isContactPage ? 'hover:text-[#1a1a18]' : 'hover:text-white';
-  const lineColor = isContactPage ? 'bg-[#1a1a18]/30' : 'bg-white/30';
-  const copyrightColor = isContactPage ? 'text-[#1a1a18]/40' : 'text-white/40';
+  // Use dark colors on light background pages (contact, works), white colors elsewhere
+  const textColor = isLightBgPage ? 'text-[#1a1a18]/60' : 'text-white/60';
+  const textHoverColor = isLightBgPage ? 'hover:text-[#1a1a18]' : 'hover:text-white';
+  const lineColor = isLightBgPage ? 'bg-[#1a1a18]/30' : 'bg-white/30';
+  const copyrightColor = isLightBgPage ? 'text-[#1a1a18]/40' : 'text-white/40';
 
   return (
     <div className="fixed left-4 top-8 z-50 flex flex-col items-center space-y-8">

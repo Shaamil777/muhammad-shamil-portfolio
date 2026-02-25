@@ -27,7 +27,7 @@ const pageColors: Record<string, string> = {
 // Define default directions for different pages
 const pageDirections: Record<string, 'down' | 'up'> = {
     '/about': 'down',
-    '/works': 'down',
+    '/works': 'up',
     '/contact': 'up',
     '/': 'down',
 };
