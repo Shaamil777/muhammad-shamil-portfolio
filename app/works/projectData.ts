@@ -16,11 +16,12 @@ export interface ProjectData {
     };
     features: { icon: string; title: string; description: string }[];
     stack: {
-        frontend: string[];
-        backend: string[];
-        database: string[];
-        apis: string[];
-        tools: string[];
+        frontend?: string[];
+        backend?: string[];
+        database?: string[];
+        apis?: string[];
+        tools?: string[];
+        [key: string]: string[] | undefined;
     };
     navigation: {
         prev: { title: string; slug: string } | null;
@@ -53,7 +54,7 @@ const projects: Record<string, ProjectData> = {
         ],
         actions: [
             { label: "View Live Demo", href: "#", type: "primary" },
-            { label: "View Code", href: "#", type: "secondary" }
+            { label: "View Code", href: "https://github.com/Shaamil777/E-com", type: "secondary" }
         ],
         heroImage: "/public/images/urbanworn-hero.jpg",
         gallery: [
@@ -168,7 +169,7 @@ const projects: Record<string, ProjectData> = {
             { label: "Type", value: "Educational Platform" },
             { label: "Role", value: "Full Stack Developer" },
             { label: "Timeline", value: "2024" },
-            { label: "Status", value: "Completed" }
+            { label: "Status", value: "Live" }
         ],
         techStack: [
             "Node.js",
@@ -182,8 +183,8 @@ const projects: Record<string, ProjectData> = {
             "AOS (Animate On Scroll)"
         ],
         actions: [
-            { label: "View Live Demo", href: "#", type: "primary" },
-            { label: "View Code", href: "#", type: "secondary" }
+            { label: "View Live Demo", href: "https://opendooreducations.com/", type: "primary" },
+            { label: "View Code", href: "https://github.com/Hemdan-MK/OpenDoor", type: "secondary" }
         ],
         heroImage: "/public/assets/OPEN DOOR LOGO 1 CIRCLE.png",
         gallery: [
@@ -281,142 +282,382 @@ const projects: Record<string, ProjectData> = {
     },
 
 
-    okalpha: {
-        slug: 'okalpha',
-        title: 'OKALPHA',
-        summary:
-            'A business portfolio and booking website for a creative agency, featuring service showcase, project galleries, testimonials, and integrated appointment scheduling.',
+    amrithaheritage: {
+        slug: "amrithaheritage",
+        title: "Amritha",
+        summary: "A premium heritage hotel platform featuring immersive virtual tours, elegant room showcases, dining experiences, and a modern booking interface for luxury hospitality.",
+
         badges: [
-            { label: 'Role', value: 'Frontend Developer' },
-            { label: 'Timeline', value: '3 Weeks' },
-            { label: 'Client', value: 'Creative Agency' },
-            { label: 'Status', value: 'Live' },
+            { label: "Type", value: "Hospitality Platform" },
+            { label: "Role", value: "Frontend Developer" },
+            { label: "Timeline", value: "2024-2025" },
+            { label: "Status", value: "Live" }
         ],
-        techStack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Calendly API'],
+
+        techStack: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Django REST API",
+            "PostgreSQL",
+            "Cloudinary",
+            "EmailJS",
+            "Marzipano 360°",
+            "Swiper.js"
+        ],
+
         actions: [
-            { label: 'Live Demo', href: '#', type: 'primary' },
-            { label: 'GitHub', href: '#', type: 'secondary' },
+            { label: "View Live Site", href: "https://amrithaheritage.com", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
         ],
-        heroImage: '/project-hero.png',
+
+        heroImage: "/public/logoBlack.png",
+
         gallery: [
-            { src: '/project-desktop-1.png', alt: 'Agency homepage', type: 'desktop' },
-            { src: '/project-desktop-2.png', alt: 'Services section', type: 'desktop' },
+            { src: "/public/images/hero.webp", alt: "Heritage Hotel Exterior", type: "desktop" },
+            { src: "/public/images/Gallery/dininghall.webp", alt: "Dining Hall", type: "desktop" },
+            { src: "/public/images/room1-desktop.webp", alt: "Luxury Room", type: "desktop" },
+            { src: "/public/images/Gallery/walkway.webp", alt: "Heritage Walkway", type: "mobile" }
         ],
+
         overview: {
-            description:
-                'OkAlpha is a premium business website for a creative agency, designed to showcase their services, past work, and client testimonials while enabling visitors to book consultations directly.',
-            audience:
-                'A growing creative agency that needed a professional digital presence to convert website visitors into booked consultations.',
-            goal:
-                'Increase consultation bookings by 40% and establish a cohesive brand identity online.',
+            description: "Amritha Heritage is a luxury heritage hotel platform designed to showcase premium accommodations, dining experiences, and cultural ambiance through a modern digital interface. Built with React and TypeScript, the platform includes immersive virtual room tours, elegant UI animations, responsive layouts, and seamless booking inquiries powered by backend APIs.",
+            audience: "Luxury travelers, heritage tourism enthusiasts, event planners, and guests seeking premium accommodation experiences.",
+            goal: "To create an immersive online presence that reflects the elegance of heritage hospitality while enabling visitors to explore rooms, dining options, and services before making reservations."
         },
 
         features: [
             {
-                icon: '🎨',
-                title: 'Visual Portfolio Gallery',
-                description: 'Interactive project showcase with filtering by service category and smooth transitions.',
+                icon: "🏛️",
+                title: "360° Virtual Room Tours",
+                description: "Interactive panoramic tours allowing users to explore rooms and spaces with seamless navigation and immersive viewing experience."
             },
             {
-                icon: '📅',
-                title: 'Consultation Booking',
-                description: 'Embedded Calendly integration for instant appointment scheduling.',
+                icon: "🍽️",
+                title: "Dining Experience Showcase",
+                description: "Dedicated sections highlighting restaurant ambiance, menu offerings, and curated dining experiences available at the hotel."
             },
             {
-                icon: '⭐',
-                title: 'Client Testimonials',
-                description: 'Animated testimonial carousel with client photos and detailed reviews.',
+                icon: "🛏️",
+                title: "Room Showcase & Booking Inquiry",
+                description: "Detailed room pages with amenities, images, pricing information, and inquiry forms for reservation requests."
             },
             {
-                icon: '🚀',
-                title: 'Performance Optimized',
-                description: 'Lighthouse score of 95+ with lazy-loaded images and optimized fonts.',
+                icon: "📧",
+                title: "Automated Email Communication",
+                description: "Email notifications for booking inquiries and contact submissions using EmailJS integration."
             },
+            {
+                icon: "🎨",
+                title: "Premium UI & Animations",
+                description: "Elegant visual design enhanced with smooth animations using Framer Motion for a refined user experience."
+            },
+            {
+                icon: "🛒",
+                title: "Interactive Reservation Flow",
+                description: "User-friendly interface guiding visitors through room selection and inquiry submission processes."
+            },
+            {
+                icon: "📱",
+                title: "Fully Responsive Design",
+                description: "Mobile-first layout ensuring seamless performance across smartphones, tablets, and desktops."
+            },
+            {
+                icon: "⚡",
+                title: "Performance Optimized",
+                description: "Fast loading times achieved through modern build tools, optimized assets, and CDN-based image delivery."
+            }
         ],
+
         stack: {
-            frontend: ['React 18', 'Next.js 14', 'Tailwind CSS', 'Framer Motion'],
-            backend: ['Next.js API Routes'],
-            database: [],
-            apis: ['Calendly API', 'Cloudinary'],
-            tools: ['Git', 'Vercel', 'Figma'],
+            frontend: [
+                "React",
+                "TypeScript",
+                "Vite Build Tool",
+                "Tailwind CSS",
+                "Framer Motion",
+                "Swiper.js",
+                "Responsive Design"
+            ],
+
+            backend: [
+                "Django REST Framework",
+                "PostgreSQL Database",
+                "API Integration",
+                "CORS Configuration"
+            ],
+
+            database: [
+                "PostgreSQL",
+                "Cloudinary Media Storage"
+            ],
+
+            apis: [
+                "Room Booking API",
+                "EmailJS Service",
+                "Cloudinary Image Delivery",
+                "Contact Form API"
+            ],
+
+            tools: [
+                "Vite Development Server",
+                "ESLint",
+                "Autoprefixer",
+                "PostCSS",
+                "Environment Configuration"
+            ]
         },
 
         navigation: {
-            prev: { title: 'SUPERLINK', slug: 'superlink' },
-            next: { title: 'KAROO', slug: 'karoo' },
-        },
+            prev: { slug: "opendoor", title: "Open Door" },
+            next: { slug: "lapo", title: "Lapo" }
+        }
     },
 
-    karoo: {
-        slug: 'karoo',
-        title: 'KAROO',
-        summary:
-            'A fintech mobile application built with React Native for peer-to-peer USDT-to-INR exchange, featuring real-time rates, secure KYC verification, and bank account management.',
+
+    lapo: {
+        slug: "lapo",
+        title: "Lapo Cart",
+        summary: "A comprehensive Next.js e-commerce platform designed for election campaign materials and services, featuring interactive video showcases, shopping cart functionality, payment integration, and modern UI animations.",
         badges: [
-            { label: 'Role', value: 'Mobile Developer' },
-            { label: 'Timeline', value: '8 Weeks' },
-            { label: 'Client', value: 'Startup' },
-            { label: 'Status', value: 'In Development' },
+            { label: "Type", value: "E-commerce Platform" },
+            { label: "Role", value: "Full-Stack Frontend Developer" },
+            { label: "Timeline", value: "2024-2025" },
+            { label: "Status", value: "Live" }
         ],
-        techStack: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'Express', 'CoinGecko API'],
+        techStack: [
+            "Next.js 15",
+            "React 19 RC",
+            "TypeScript",
+            "Tailwind CSS",
+            "Fluid Tailwind",
+            "Razorpay Payment Gateway",
+            "Axios",
+            "Lucide React Icons",
+            "Django REST API Backend",
+            "Cloudinary Media Storage"
+        ],
         actions: [
-            { label: 'GitHub', href: '#', type: 'primary' },
-            { label: 'Case Study', href: '#', type: 'secondary' },
+            { label: "View Live Site", href: "https://www.lapoelectioncart.com/", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
         ],
-        heroImage: '/project-hero.png',
+        heroImage: "/public/Logo.svg",
         gallery: [
-            { src: '/project-mobile-1.png', alt: 'Exchange screen', type: 'mobile' },
-            { src: '/project-mobile-2.png', alt: 'KYC verification flow', type: 'mobile' },
+            { src: "/public/intro.jpg", alt: "Platform Introduction", type: "desktop" },
+            { src: "/public/helicopter-bg.jpg", alt: "Campaign Helicopter Service", type: "desktop" },
+            { src: "/public/vr.webp", alt: "VR Campaign Experience", type: "desktop" },
+            { src: "/public/healthatm.webp", alt: "Health ATM Service", type: "mobile" }
         ],
         overview: {
-            description:
-                'Karoo is a mobile-first fintech application enabling peer-to-peer cryptocurrency exchange, specifically USDT to INR conversion, with live market rates, KYC-verified transactions, and integrated bank account management.',
-            audience:
-                'Built for a fintech startup targeting users in India who need a reliable, compliant platform for crypto-to-fiat conversions.',
-            goal:
-                'Create a secure, regulation-ready mobile app that simplifies crypto-to-fiat exchange for everyday users.',
+            description: "Election Cart is a modern e-commerce platform specifically designed for political campaigns in India. Built with Next.js 15 and React 19, it offers an innovative shopping experience for campaign materials, services, and digital tools. The platform features interactive video showcases, seamless payment integration via Razorpay, and a comprehensive cart system for political campaign needs.",
+            audience: "Political candidates, campaign managers, election consultants, political parties, and campaign service providers across India from Panchayat to Parliamentary elections.",
+            goal: "To revolutionize political campaign procurement by providing a centralized platform for innovative campaign tools, AI-powered services, and traditional campaign materials with modern e-commerce functionality."
         },
-
         features: [
             {
-                icon: '💱',
-                title: 'Live Exchange Rates',
-                description: 'Real-time USDT/INR rates from CoinGecko with auto-refresh and manual update.',
+                icon: "🎥",
+                title: "Interactive Video Hero Section",
+                description: "Dynamic video showcase with 5 draggable campaign videos, hover-to-play functionality, and mobile carousel with touch gestures."
             },
             {
-                icon: '🔐',
-                title: 'KYC Verification',
-                description: 'Multi-step identity verification with document upload and selfie matching.',
+                icon: "🛒",
+                title: "Advanced Shopping Cart System",
+                description: "Full-featured cart with localStorage persistence, quantity management, and seamless checkout flow integrated with Razorpay."
             },
             {
-                icon: '🏦',
-                title: 'Bank Management',
-                description: 'Add, verify, and manage bank accounts for INR payouts.',
+                icon: "💳",
+                title: "Razorpay Payment Integration",
+                description: "Secure payment processing with support for multiple payment methods including UPI, cards, and net banking."
             },
             {
-                icon: '📊',
-                title: 'Transaction History',
-                description: 'Complete exchange history with status tracking and receipt generation.',
+                icon: "🔐",
+                title: "User Authentication & Profiles",
+                description: "Complete user management system with login, signup, and profile management for personalized shopping experience."
             },
             {
-                icon: '👁️',
-                title: 'Balance Privacy',
-                description: 'Toggle balance visibility with eye icon for privacy in public settings.',
+                icon: "📦",
+                title: "Campaign Packages & Services",
+                description: "Comprehensive catalog of campaign packages including AI video generation, helicopter services, display vehicles, and digital tools."
             },
+            {
+                icon: "📱",
+                title: "Fully Responsive Design",
+                description: "Mobile-first approach with fluid Tailwind CSS ensuring optimal experience across all devices and screen sizes."
+            },
+            {
+                icon: "⚡",
+                title: "Performance Optimized",
+                description: "Built with Next.js 15 and Turbopack for lightning-fast development and production performance with optimized images and lazy loading."
+            },
+            {
+                icon: "🎨",
+                title: "Modern UI/UX Design",
+                description: "Contemporary design with smooth animations, custom fonts, and brand-consistent color scheme using Tailwind CSS."
+            }
         ],
         stack: {
-            frontend: ['React Native', 'Expo', 'React Navigation', 'Async Storage'],
-            backend: ['Node.js', 'Express.js', 'JWT Auth', 'Multer'],
-            database: ['MongoDB', 'Mongoose'],
-            apis: ['CoinGecko API', 'Bank Verification API'],
-            tools: ['Git', 'Expo Go', 'Postman', 'MongoDB Atlas'],
+            frontend: [
+                "Next.js 15.0.3",
+                "React 19.0.0-rc",
+                "TypeScript 5.x",
+                "Tailwind CSS",
+                "Fluid Tailwind",
+                "Lucide React Icons",
+                "React Icons",
+                "CLSX Utility"
+            ],
+            backend: [
+                "Django REST Framework",
+                "API Integration via Axios",
+                "Authentication Services",
+                "Product & Campaign APIs"
+            ],
+            database: [
+                "Backend Database (Django)",
+                "LocalStorage for Cart Persistence",
+                "Cloudinary Media Storage"
+            ],
+            apis: [
+                "Razorpay Payment Gateway",
+                "Campaign Management API",
+                "Package Catalog API",
+                "User Authentication API",
+                "Order Management API",
+                "Resource Upload API"
+            ],
+            tools: [
+                "Next.js Development Server",
+                "Turbopack Build Tool",
+                "ESLint Code Quality",
+                "PostCSS Processing",
+                "Environment Configuration",
+                "Vercel Deployment Ready"
+            ]
         },
-
         navigation: {
-            prev: { title: 'OKALPHA', slug: 'okalpha' },
-            next: null,
-        },
+            prev: { slug: "amrithaheritage", title: "Amritha Heritage" },
+            next: { slug: "cafco", title: "Cafco" }
+        }
     },
+    cafco: {
+        "slug": "cafco",
+        "title": "CAFCOHOME",
+        "summary": "A sophisticated e-commerce platform for premium furniture featuring minimalist design, interactive product showcases, curated collections, and immersive shopping experiences with modern web technologies.",
+        "badges": [
+            { "label": "Type", "value": "E-commerce Platform" },
+            { "label": "Role", "value": "Frontend Developer" },
+            { "label": "Timeline", "value": "2024-2025" },
+            { "label": "Status", "value": "In Development" }
+        ],
+        "techStack": [
+            "Next.js 16.1.1",
+            "React 19.2.0",
+            "TypeScript 5",
+            "Tailwind CSS 3.4.0",
+            "Framer Motion 12.23.24",
+            "Swiper.js 12.0.3",
+            "Lenis Smooth Scroll",
+            "Lottie Animations",
+            "Lucide React Icons"
+        ],
+        "actions": [
+            { "label": "View Live Demo", "href": "#", "type": "primary" },
+            { "label": "View Source Code", "href": "#", "type": "secondary" }
+        ],
+        "heroImage": "/public/herodesktop.jpg",
+        "gallery": [
+            { "src": "/public/herodesktop.jpg", "alt": "Modern Furniture Hero", "type": "desktop" },
+            { "src": "/public/heromobile.jpg", "alt": "Mobile Hero Experience", "type": "mobile" }
+        ],
+        "overview": {
+            "description": "CAFCOHOME is a premium furniture e-commerce platform built with Next.js 16 and React 19, showcasing modern luxury furniture through an immersive digital experience. The platform features sophisticated product categorization across 10 categories, 6 curated collections, and over 30 premium furniture pieces. Built with a minimalist luxury design philosophy, it incorporates advanced animations, smooth scrolling, and responsive design optimized for both desktop and mobile experiences.",
+            "audience": "Interior design enthusiasts, luxury furniture buyers, home decorators, architects, and design professionals seeking premium furniture pieces for residential and commercial spaces.",
+            "goal": "To create an elegant digital showroom that captures the essence of modern luxury furniture while providing seamless browsing and shopping experiences that convert visitors into customers through sophisticated design and user experience."
+        },
+        "features": [
+            {
+                "icon": "🏠",
+                "title": "Curated Furniture Collections",
+                "description": "Six distinct collections including Minimalist Luxe, Raw & Earthy, Dark Academy, Coastal Serenity, Urban Industrial, and Scandinavian Pure, each with unique design philosophies and carefully selected pieces."
+            },
+            {
+                "icon": "🛋️",
+                "title": "Comprehensive Product Catalog",
+                "description": "Over 30 premium furniture pieces across 10 categories including Sofas, Tables, Chairs, Storage, Rugs, Lamps, Beds, Outdoor furniture, and Decor with detailed specifications and high-quality imagery."
+            },
+            {
+                "icon": "🎨",
+                "title": "Luxury Design System",
+                "description": "Sophisticated color palette with travertine, warm obsidian, and aged bronze tones, custom typography using Hammersmith One and Playfair Display fonts, and architectural design elements throughout."
+            },
+            {
+                "icon": "📱",
+                "title": "Interactive Mobile Experience",
+                "description": "Mobile-first responsive design with touch-friendly interfaces, swipeable offer cards, stacked card interactions, and optimized navigation for seamless mobile shopping experiences."
+            },
+            {
+                "icon": "✨",
+                "title": "Advanced Animations & Interactions",
+                "description": "Smooth scroll implementation with Lenis, Framer Motion animations, Lottie integrations, hover effects, and cinematic transitions that enhance the luxury shopping experience."
+            },
+            {
+                "icon": "🔍",
+                "title": "Product Discovery Features",
+                "description": "Advanced filtering by categories and collections, product search functionality, wishlist capabilities, quick add features, and curated product recommendations for enhanced discovery."
+            },
+            {
+                "icon": "🛒",
+                "title": "Modern Shopping Experience",
+                "description": "Streamlined product cards with hover effects, quick add functionality, collection-based browsing, and intuitive navigation designed for luxury furniture shopping."
+            },
+            {
+                "icon": "⚡",
+                "title": "Performance Optimized",
+                "description": "Next.js 16 App Router architecture, optimized images with Next.js Image component, code splitting, lazy loading, and fast loading times for superior user experience."
+            }
+        ],
+        "stack": {
+            "frontend": [
+                "Next.js 16.1.1 (App Router)",
+                "React 19.2.0 (Latest)",
+                "TypeScript 5",
+                "Tailwind CSS 3.4.0",
+                "Framer Motion 12.23.24",
+                "Swiper.js 12.0.3",
+                "Lenis 1.3.17 (Smooth Scroll)"
+            ],
+            "ui_libraries": [
+                "@lottiefiles/dotlottie-react 0.17.7",
+                "Lucide React 0.554.0",
+                "clsx 2.1.1",
+                "tailwind-merge 3.4.0"
+            ],
+            "development": [
+                "ESLint 9",
+                "PostCSS 8.4.32",
+                "Autoprefixer 10.4.16",
+                "TypeScript ESLint"
+            ],
+            "fonts": [
+                "Hammersmith One (Primary)",
+                "Playfair Display (Secondary)",
+                "Google Fonts Integration"
+            ],
+            "assets": [
+                "Unsplash Image Integration",
+                "Custom Hero Images",
+                "Optimized Image Delivery"
+            ]
+        },
+        "navigation": {
+            "prev": { "title": "LAPO", "slug": "lapo" },
+            "next": null
+        }
+    },
+
+
 };
 
 export function getProject(slug: string): ProjectData | undefined {
