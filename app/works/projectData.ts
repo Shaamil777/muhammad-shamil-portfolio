@@ -656,8 +656,128 @@ const projects: Record<string, ProjectData> = {
             "next": null
         }
     },
-
-
+    evento: {
+        slug: "evento",
+        title: "Evento",
+        summary: "A premium convention center website showcasing luxury event venues with modern design, interactive galleries, and comprehensive facility information for hosting memorable events.",
+        badges: [
+            { label: "Type", value: "Convention Center Website" },
+            { label: "Role", value: "Frontend Developer" },
+            { label: "Timeline", value: "2024" },
+            { label: "Status", value: "Completed" }
+        ],
+        techStack: [
+            "React.js",
+            "Vite",
+            "Tailwind CSS",
+            "JavaScript (ES6+)",
+            "Lenis (Smooth Scrolling)",
+            "Lucide React",
+            "CSS3",
+            "HTML5"
+        ],
+        actions: [
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "https://github.com/your-username/evento-convention", type: "secondary" }
+        ],
+        heroImage: "/public/images/evento-hero.jpg",
+        gallery: [
+            { src: "/public/images/hero-carousel.jpg", alt: "Grand Convention Hall", type: "desktop" },
+            { src: "/public/images/luxury-seating.jpg", alt: "Premium Auditorium Seating", type: "desktop" },
+            { src: "/public/images/stage-lighting.jpg", alt: "Dynamic Stage Setup", type: "desktop" },
+            { src: "/public/images/gallery-showcase.jpg", alt: "Event Gallery", type: "mobile" }
+        ],
+        overview: {
+            description: "Evento Convention Center is a sophisticated website showcasing a premium event venue with state-of-the-art facilities. Built with React and Tailwind CSS, it features immersive hero carousels, interactive galleries, detailed facility showcases, and seamless contact integration to attract and inform potential clients.",
+            audience: "Event planners, corporate clients, wedding organizers, and individuals seeking premium venues for conferences, celebrations, and special occasions.",
+            goal: "To create an elegant, user-friendly platform that showcases the convention center's luxury amenities and facilitates easy booking inquiries while providing an immersive digital experience."
+        },
+        features: [
+            {
+                icon: "🎭",
+                title: "Interactive Hero Carousel",
+                description: "Dynamic slideshow featuring stunning venue imagery with smooth transitions and compelling call-to-action buttons for different event types."
+            },
+            {
+                icon: "🏛️",
+                title: "Venue Showcase",
+                description: "Comprehensive introduction section highlighting the convention center's architecture, ambiance, and premium positioning in the market."
+            },
+            {
+                icon: "🎵",
+                title: "Advanced Facility Features",
+                description: "Detailed presentation of state-of-the-art sound systems, luxury seating, dynamic lighting, and premium interior design elements."
+            },
+            {
+                icon: "🖼️",
+                title: "3D Gallery Experience",
+                description: "Interactive circular gallery with drag-to-scroll functionality, perspective transforms, and lightbox viewing for immersive image exploration."
+            },
+            {
+                icon: "🎬",
+                title: "Video Showcase Integration",
+                description: "Embedded promotional video with autoplay functionality to provide virtual tours and highlight the venue's capabilities."
+            },
+            {
+                icon: "📍",
+                title: "Contact & Location Hub",
+                description: "Comprehensive contact section with interactive forms, Google Maps integration, and detailed venue information for easy communication."
+            },
+            {
+                icon: "📱",
+                title: "Responsive Design",
+                description: "Mobile-first responsive layout ensuring optimal viewing experience across all devices with touch-friendly interactions."
+            },
+            {
+                icon: "🎨",
+                title: "Premium UI/UX",
+                description: "Elegant dark theme with gold accents, smooth animations, and sophisticated typography creating a luxury brand experience."
+            },
+            {
+                icon: "⚡",
+                title: "Performance Optimized",
+                description: "Built with Vite for fast loading times, optimized images, and smooth scrolling powered by Lenis for enhanced user experience."
+            },
+            {
+                icon: "🔗",
+                title: "Social Integration",
+                description: "Social media links and sharing capabilities to extend the venue's digital presence and facilitate word-of-mouth marketing."
+            }
+        ],
+        stack: {
+            frontend: [
+                "React.js (Functional Components & Hooks)",
+                "Tailwind CSS (Utility-First Styling)",
+                "JavaScript ES6+ (Modern Syntax)",
+                "CSS3 (Custom Animations & Transitions)",
+                "HTML5 (Semantic Structure)"
+            ],
+            libraries: [
+                "Lenis (Smooth Scrolling Library)",
+                "Lucide React (Icon Components)",
+                "React Hooks (useState, useEffect, useRef)",
+                "CSS Grid & Flexbox (Layout Systems)"
+            ],
+            tools: [
+                "Vite (Build Tool & Dev Server)",
+                "ESLint (Code Quality)",
+                "npm (Package Management)",
+                "Git (Version Control)"
+            ],
+            features: [
+                "Responsive Design (Mobile-First Approach)",
+                "Interactive Galleries (Drag & Touch Support)",
+                "Form Handling (Contact Forms)",
+                "Google Maps Integration",
+                "YouTube Video Embedding",
+                "Smooth Scrolling & Animations"
+            ]
+        },
+        navigation: {
+            prev: { title: 'UrbanWorn E-commerce', slug: 'urbanworn' },
+            next: { title: 'Next Project', slug: 'next-project' }
+        }
+    },
 };
 
 export function getProject(slug: string): ProjectData | undefined {
