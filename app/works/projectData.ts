@@ -188,10 +188,12 @@ const projects: Record<string, ProjectData> = {
         ],
         heroImage: "/public/assets/OPEN DOOR LOGO 1 CIRCLE.png",
         gallery: [
-            { src: "/public/assets/about.webp", alt: "About Page", type: "desktop" },
-            { src: "/public/assets/courses.webp", alt: "Course Catalog", type: "desktop" },
-            { src: "/public/assets/colleges.webp", alt: "College Directory", type: "desktop" },
-            { src: "/public/assets/form.webp", alt: "Student Registration", type: "mobile" }
+            { src: "/projects/opendoor/hero-section.webp", alt: "Hero Section", type: "desktop" },
+            { src: "/projects/opendoor/about.webp", alt: "About Page", type: "desktop" },
+            { src: "/projects/opendoor/courses.webp", alt: "Course Catalog", type: "desktop" },
+            { src: "/projects/opendoor/collages.webp", alt: "College Directory", type: "desktop" },
+            { src: "/projects/opendoor/vision mission.webp", alt: "Vision & Mission", type: "desktop" },
+            { src: "/projects/opendoor/phone-view.webp", alt: "Mobile View", type: "mobile" }
         ],
         overview: {
             description: "Open Door Educations is a comprehensive educational consultancy platform built with Node.js and EJS templating. It provides students with access to extensive course catalogs across multiple disciplines, college information, and streamlined application processes. The platform features detailed course information, college partnerships, and automated email communication for student inquiries.",
@@ -277,7 +279,7 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: { slug: 'urbanworn', title: 'URBANWORN' },
-            next: { slug: 'okalpha', title: 'OKALPHA' }
+            next: { slug: 'amrithaheritage', title: 'AMRITHA' }
         }
     },
 
@@ -316,10 +318,9 @@ const projects: Record<string, ProjectData> = {
         heroImage: "/public/logoBlack.png",
 
         gallery: [
-            { src: "/public/images/hero.webp", alt: "Heritage Hotel Exterior", type: "desktop" },
-            { src: "/public/images/Gallery/dininghall.webp", alt: "Dining Hall", type: "desktop" },
-            { src: "/public/images/room1-desktop.webp", alt: "Luxury Room", type: "desktop" },
-            { src: "/public/images/Gallery/walkway.webp", alt: "Heritage Walkway", type: "mobile" }
+            { src: "/projects/amritha/02.webp", alt: "Heritage Hotel Exterior", type: "desktop" },
+            { src: "/projects/amritha/01.webp", alt: "Room Showcase & Booking", type: "desktop" },
+            { src: "/projects/amritha/03.webp", alt: "Restaurant & Dining", type: "desktop" }
         ],
 
         overview: {
@@ -445,10 +446,10 @@ const projects: Record<string, ProjectData> = {
         ],
         heroImage: "/public/Logo.svg",
         gallery: [
-            { src: "/public/intro.jpg", alt: "Platform Introduction", type: "desktop" },
-            { src: "/public/helicopter-bg.jpg", alt: "Campaign Helicopter Service", type: "desktop" },
-            { src: "/public/vr.webp", alt: "VR Campaign Experience", type: "desktop" },
-            { src: "/public/healthatm.webp", alt: "Health ATM Service", type: "mobile" }
+            { src: "/projects/lapo/01.webp", alt: "Hero Section & Campaign Showcase", type: "desktop" },
+            { src: "/projects/lapo/02.webp", alt: "Popular Packages", type: "desktop" },
+            { src: "/projects/lapo/03.webp", alt: "About & Company Info", type: "desktop" },
+            { src: "/projects/lapo/04.webp", alt: "Login & Authentication", type: "desktop" }
         ],
         overview: {
             description: "Election Cart is a modern e-commerce platform specifically designed for political campaigns in India. Built with Next.js 15 and React 19, it offers an innovative shopping experience for campaign materials, services, and digital tools. The platform features interactive video showcases, seamless payment integration via Razorpay, and a comprehensive cart system for political campaign needs.",
@@ -568,8 +569,10 @@ const projects: Record<string, ProjectData> = {
         ],
         "heroImage": "/public/herodesktop.jpg",
         "gallery": [
-            { "src": "/public/herodesktop.jpg", "alt": "Modern Furniture Hero", "type": "desktop" },
-            { "src": "/public/heromobile.jpg", "alt": "Mobile Hero Experience", "type": "mobile" }
+            { "src": "/projects/cafco/01.webp", "alt": "Modern Furniture Hero", "type": "desktop" },
+            { "src": "/projects/cafco/02.webp", "alt": "Shop by Category", "type": "desktop" },
+            { "src": "/projects/cafco/03.webp", "alt": "Trending Interiors & Products", "type": "desktop" },
+            { "src": "/projects/cafco/04.webp", "alt": "Curated Collections", "type": "desktop" }
         ],
         "overview": {
             "description": "CAFCOHOME is a premium furniture e-commerce platform built with Next.js 16 and React 19, showcasing modern luxury furniture through an immersive digital experience. The platform features sophisticated product categorization across 10 categories, 6 curated collections, and over 30 premium furniture pieces. Built with a minimalist luxury design philosophy, it incorporates advanced animations, smooth scrolling, and responsive design optimized for both desktop and mobile experiences.",
@@ -662,8 +665,8 @@ const projects: Record<string, ProjectData> = {
         summary: "A premium convention center website showcasing luxury event venues with modern design, interactive galleries, and comprehensive facility information for hosting memorable events.",
         badges: [
             { label: "Type", value: "Convention Center Website" },
-            { label: "Role", value: "Frontend Developer" },
-            { label: "Timeline", value: "2024" },
+            { label: "Role", value: "Full Stack Developer" },
+            { label: "Timeline", value: "2025" },
             { label: "Status", value: "Completed" }
         ],
         techStack: [

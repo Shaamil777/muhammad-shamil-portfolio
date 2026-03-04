@@ -80,42 +80,28 @@ export default function ProjectDetail() {
 
             {/* 2. Visual Showcase */}
             <section className="pd-showcase content-reveal pd-reveal-4" id="pd-showcase">
-                <div className="pd-showcase-featured">
-                    <div className="pd-showcase-placeholder">
-                        <div className="pd-placeholder-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                <circle cx="8.5" cy="8.5" r="1.5" />
-                                <polyline points="21 15 16 10 5 21" />
-                            </svg>
-                        </div>
-                        <p className="pd-placeholder-text">Featured Project Image</p>
-                        <p className="pd-placeholder-hint">Replace with your project screenshot or mockup</p>
+                {project.gallery.length > 0 && (
+                    <div className="pd-showcase-featured">
+                        <img
+                            src={project.gallery[0].src}
+                            alt={project.gallery[0].alt}
+                            className="pd-showcase-featured-img"
+                        />
                     </div>
-                </div>
-                <div className="pd-showcase-gallery">
-                    {project.gallery.map((img, index) => (
-                        <div key={index} className={`pd-gallery-item ${img.type === 'mobile' ? 'pd-gallery-mobile' : 'pd-gallery-desktop'}`}>
-                            <div className="pd-gallery-placeholder">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                                    {img.type === 'mobile' ? (
-                                        <>
-                                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                                            <line x1="12" y1="18" x2="12.01" y2="18" />
-                                        </>
-                                    ) : (
-                                        <>
-                                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                                            <line x1="8" y1="21" x2="16" y2="21" />
-                                            <line x1="12" y1="17" x2="12" y2="21" />
-                                        </>
-                                    )}
-                                </svg>
-                                <span className="pd-gallery-label">{img.alt}</span>
+                )}
+                {project.gallery.length > 1 && (
+                    <div className="pd-showcase-gallery">
+                        {project.gallery.slice(1).map((img, index) => (
+                            <div key={index} className={`pd-gallery-item ${img.type === 'mobile' ? 'pd-gallery-mobile' : 'pd-gallery-desktop'}`}>
+                                <img
+                                    src={img.src}
+                                    alt={img.alt}
+                                    className="pd-gallery-img"
+                                />
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </section>
 
             {/* Content sections wrapper */}
