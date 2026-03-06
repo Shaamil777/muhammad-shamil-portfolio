@@ -155,8 +155,8 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: null,
-            next: { title: 'OPEN DOOR   ', slug: 'opendoor' }
+            prev: { title: 'AMRITHA', slug: 'amrithaheritage' },
+            next: { title: 'LAPO', slug: 'lapo' }
         }
     },
 
@@ -278,7 +278,7 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { slug: 'urbanworn', title: 'URBANWORN' },
+            prev: null,
             next: { slug: 'amrithaheritage', title: 'AMRITHA' }
         }
     },
@@ -413,7 +413,7 @@ const projects: Record<string, ProjectData> = {
 
         navigation: {
             prev: { slug: "opendoor", title: "Open Door" },
-            next: { slug: "lapo", title: "Lapo" }
+            next: { slug: "urbanworn", title: "UrbanWorn" }
         }
     },
 
@@ -538,7 +538,7 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { slug: "amrithaheritage", title: "Amritha Heritage" },
+            prev: { slug: "urbanworn", title: "UrbanWorn" },
             next: { slug: "cafco", title: "Cafco" }
         }
     },
@@ -656,7 +656,7 @@ const projects: Record<string, ProjectData> = {
         },
         "navigation": {
             "prev": { "title": "LAPO", "slug": "lapo" },
-            "next": null
+            "next": { "title": "EVENTO", "slug": "evento" }
         }
     },
     evento: {
@@ -777,8 +777,8 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'UrbanWorn E-commerce', slug: 'urbanworn' },
-            next: { title: 'Next Project', slug: 'next-project' }
+            prev: { title: 'CAFCO', slug: 'cafco' },
+            next: null
         }
     },
 };

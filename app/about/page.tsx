@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+
 
 export default function AboutPage() {
   return (
@@ -34,22 +34,22 @@ export default function AboutPage() {
             <p className="about-quote-intro">
               This is how I approach building software:
             </p>
-            
+
             <blockquote className="about-quote font-cormorant">
               "I don't build features just because they're possible.
-I build only what needs to exist.""
+              I build only what needs to exist.""
             </blockquote>
 
             <p className="about-quote-explanation">
               I'm not interested in writing code for the sake of complexity or visual appeal alone.
-Every decision I make—architecture, features, performance—is driven by real use cases and real constraints. I focus on building software that solves actual problems, scales when needed, and delivers measurable value in the real world.
+              Every decision I make—architecture, features, performance—is driven by real use cases and real constraints. I focus on building software that solves actual problems, scales when needed, and delivers measurable value in the real world.
             </p>
           </div>
 
           {/* Experience Section */}
           <div className="about-experience-section content-reveal about-reveal-5">
             <h3 className="about-section-title font-cormorant">Experience</h3>
-            
+
             <div className="about-experience-item">
               <h4 className="about-experience-degree">Self-Taught Full-Stack Developer</h4>
               <p className="about-experience-description">
@@ -74,7 +74,7 @@ Every decision I make—architecture, features, performance—is driven by real 
           {/* Skills Section */}
           <div className="about-skills-section content-reveal about-reveal-6">
             <h3 className="about-section-title font-cormorant">Skills</h3>
-            
+
             <p className="about-skills-list">
               MERN Stack Development / JavaScript & TypeScript / React & Next.js / Node.js & Express.js / MongoDB & SQL Databases / REST API Development / Authentication & Authorization (JWT, Roles) / Redux & Context API / Admin Dashboards & Role-Based Systems / Payment Integration (Razorpay) / Real-Time Features / Database Design / Responsive UI Development / Git & Version Control / Deployment & Hosting (Vercel, Render, AWS, Nginx)
             </p>
@@ -84,14 +84,8 @@ Every decision I make—architecture, features, performance—is driven by real 
         {/* Right Section - Image */}
         <div className="about-right content-reveal about-reveal-3">
           <div className="about-image-container">
-            <Image
-              src="/about-profile.png"
-              alt="Profile portrait"
-              width={400}
-              height={520}
-              className="about-image"
-              priority
-            />
+            {/* Image placeholder — add your image here later */}
+            <div className="about-image" style={{ width: 400, height: 520, backgroundColor: '#1a1a18' }} />
           </div>
         </div>
       </div>
