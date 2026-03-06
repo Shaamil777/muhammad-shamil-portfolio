@@ -8,7 +8,7 @@ export default function AboutPage() {
       {/* Main content grid */}
       <div className="about-content">
         {/* Left Section - Title and Notes */}
-        <div className="about-left pl-30">
+        <div className="about-left pl-0 md:pl-30">
           <h1 className="about-title font-cormorant content-reveal about-reveal-1">About</h1>
 
           <h2 className="about-subtitle font-cormorant content-reveal about-reveal-2">

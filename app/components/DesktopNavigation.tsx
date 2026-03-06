@@ -16,7 +16,7 @@ export default function DesktopNavigation() {
   const copyrightColor = isLightBgPage ? 'text-[#1a1a18]/40' : 'text-white/40';
 
   return (
-    <div className="fixed left-4 top-8 z-50 flex flex-col items-center space-y-8">
+    <div className="fixed left-4 top-8 z-50 hidden md:flex flex-col items-center space-y-8">
       {isHomePage ? (
         <>
           {/* Social Links - Only shown on home page */}
