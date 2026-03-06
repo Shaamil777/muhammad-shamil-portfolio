@@ -25,11 +25,19 @@ const siteUrl = 'https://muhammadshamil.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Shamil — Portfolio",
-  description: "Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.",
-  keywords: ['Muhammad Shamil', 'MERN Stack Developer', 'Freelance Developer', 'Full-stack Developer', 'Web Developer', 'Portfolio', 'React', 'Next.js', 'Node.js'],
+  title: {
+    default: 'Muhammad Shamil — Full-stack Web Developer | Portfolio',
+    template: '%s | Shamil',
+  },
+  description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
+  keywords: ['Muhammad Shamil', 'MERN Stack Developer', 'Freelance Developer', 'Full-stack Developer', 'Web Developer', 'Portfolio', 'React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js', 'Web Development India'],
   authors: [{ name: 'Muhammad Shamil' }],
+  creator: 'Muhammad Shamil',
+  publisher: 'Muhammad Shamil',
   robots: 'index, follow',
+  alternates: {
+    canonical: siteUrl,
+  },
 
   // Open Graph — Facebook, LinkedIn, WhatsApp, etc.
   openGraph: {
@@ -37,7 +45,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: 'Muhammad Shamil — Full-stack Web Developer',
     description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
-    siteName: 'Shamil — Portfolio',
+    siteName: 'Muhammad Shamil — Portfolio',
     images: [
       {
         url: '/og-image.png',
@@ -58,6 +66,36 @@ export const metadata: Metadata = {
   },
 };
 
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: 'Muhammad Shamil',
+      url: siteUrl,
+      jobTitle: 'Full-stack Web Developer',
+      description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
+      knowsAbout: ['React', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript', 'TypeScript', 'MERN Stack', 'Full-stack Development'],
+      sameAs: [
+        'https://github.com/Shaamil777',
+        'https://www.linkedin.com/in/muhammad-shamil-4b42a8329/',
+        'https://www.instagram.com/_sh4mill/',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: 'Muhammad Shamil — Portfolio',
+      description: 'Personal portfolio of Muhammad Shamil, a freelance MERN stack developer.',
+      publisher: { '@id': `${siteUrl}/#person` },
+      inLanguage: 'en-US',
+    },
+  ],
+};
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -71,6 +109,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} antialiased`}
       >
