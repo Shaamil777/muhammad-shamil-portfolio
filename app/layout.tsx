@@ -30,7 +30,12 @@ export const metadata: Metadata = {
     template: '%s | Shamil',
   },
   description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
-  keywords: ['Muhammad Shamil', 'MERN Stack Developer', 'Freelance Developer', 'Full-stack Developer', 'Web Developer', 'Portfolio', 'React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js', 'Web Development India'],
+  keywords: [
+    'Muhammad Shamil', 'MERN Stack Developer', 'Freelance Developer', 'Full-stack Developer', 'Web Developer', 'Portfolio',
+    'React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js',
+    'Web Development India', 'Freelance Web Developer', 'Freelance Web Developer in Kerala', 'Freelance Web Developer in Calicut',
+    'Web Designer Kerala', 'Software Developer Calicut', 'Frontend Developer', 'Backend Developer', 'React Developer Kerala', 'Next.js Developer India'
+  ],
   authors: [{ name: 'Muhammad Shamil' }],
   creator: 'Muhammad Shamil',
   publisher: 'Muhammad Shamil',
