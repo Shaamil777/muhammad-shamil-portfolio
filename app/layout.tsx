@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     template: '%s | Shamil',
   },
   description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
+  applicationName: 'Muhammad Shamil Portfolio',
   keywords: [
     'Muhammad Shamil', 'MERN Stack Developer', 'Freelance Developer', 'Full-stack Developer', 'Web Developer', 'Portfolio',
     'React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js',
@@ -93,7 +94,8 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
-      name: 'Muhammad Shamil — Portfolio',
+      name: 'Muhammad Shamil Portfolio',
+      alternateName: ['Muhammad Shamil', 'Shamil Portfolio'],
       description: 'Personal portfolio of Muhammad Shamil, a freelance MERN stack developer.',
       publisher: { '@id': `${siteUrl}/#person` },
       inLanguage: 'en-US',
