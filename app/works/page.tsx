@@ -8,7 +8,9 @@ const projects = [
   { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT' },
   { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES' },
   { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT' },
-  { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE' }
+  { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE' },
+  { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION' },
+  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' }
 ];
 
 export default function Works() {

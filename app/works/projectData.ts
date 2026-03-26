@@ -778,6 +778,209 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: { title: 'CAFCO', slug: 'cafco' },
+            next: { title: 'AI DOC CHAT', slug: 'aidocchat' }
+        }
+    },
+    aidocchat: {
+        slug: "aidocchat",
+        title: "AI Doc Chat",
+        summary: "An AI-powered documentation chat application using RAG (Retrieval-Augmented Generation) to provide context-aware answers from uploaded documents.",
+        badges: [
+            { label: "Type", value: "AI Application" },
+            { label: "Role", value: "Full Stack Developer" },
+            { label: "Timeline", value: "2024" },
+            { label: "Status", value: "Completed" }
+        ],
+        techStack: [
+            "NestJS",
+            "TypeScript",
+            "Next.js 14",
+            "React",
+            "Tailwind CSS",
+            "Google Gemini 2.5 Flash",
+            "Gemini Embedding",
+            "ChromaDB"
+        ],
+        actions: [
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
+        ],
+        heroImage: "/projects/aidocchat/1.png",
+        gallery: [
+            { src: "/projects/aidocchat/1.png", alt: "AI Doc Chat Interface", type: "desktop" },
+            { src: "/projects/aidocchat/2.png", alt: "Document Upload & Processing", type: "desktop" }
+        ],
+        overview: {
+            description: "AI Doc Chat is an advanced documentation chat application built with RAG architecture. It allows users to upload documents (PDF, Markdown, Text) and ask questions about them. The system parses, chunks, and embeds the document content into ChromaDB. When a question is asked, it retrieves the most relevant chunks using semantic search and uses Google Gemini 2.5 Flash to generate accurate, context-grounded answers, significantly reducing AI hallucinations.",
+            audience: "Developers, researchers, students, and professionals who need to quickly extract information and insights from large documents without reading them entirely.",
+            goal: "To solve the hallucination problem in standard LLMs by grounding answers in user-provided context through a robust Retrieval-Augmented Generation pipeline."
+        },
+        features: [
+            {
+                icon: "📄",
+                title: "Document Upload & Parsing",
+                description: "Support for various document formats including PDFs, Markdown, and text files with intelligent text extraction."
+            },
+            {
+                icon: "🧠",
+                title: "Intelligent Chunking",
+                description: "Smart document chunking with overlap to preserve context across boundaries and improve retrieval accuracy."
+            },
+            {
+                icon: "🔍",
+                title: "Semantic Retrieval",
+                description: "Advanced semantic search using Gemini Embedding model and ChromaDB for highly relevant context retrieval."
+            },
+            {
+                icon: "💬",
+                title: "AI Chat Interface",
+                description: "Interactive chat UI with source attribution, showing exactly which document sections informed the answer."
+            },
+            {
+                icon: "📊",
+                title: "Processing Status Tracking",
+                description: "Real-time visual feedback on document processing states (parsing, embedding, ready)."
+            },
+            {
+                icon: "💾",
+                title: "Persistent State",
+                description: "Maintains chat history and document state across sessions for continuous workflow."
+            },
+            {
+                icon: "🛡️",
+                title: "Error Handling",
+                description: "Robust error handling and fallback responses to gracefully manage failures or unanswerable queries."
+            }
+        ],
+        stack: {
+            frontend: [
+                "Next.js 14",
+                "React",
+                "Tailwind CSS"
+            ],
+            backend: [
+                "NestJS",
+                "TypeScript"
+            ],
+            database: [
+                "ChromaDB (Vector Storage)"
+            ],
+            apis: [
+                "Google Gemini 2.5 Flash API",
+                "Gemini Embedding API"
+            ],
+            tools: [
+                "RAG Pipeline Architecture",
+                "Vector Embeddings",
+                "Semantic Search Workflow"
+            ]
+        },
+        navigation: {
+            prev: { title: 'EVENTO', slug: 'evento' },
+            next: { title: 'DEVLOOM', slug: 'devloom' }
+        }
+    },
+    devloom: {
+        slug: "devloom",
+        title: "DevLoom",
+        summary: "A modern publishing platform designed for developers to write, share, and discover technical knowledge with a rich, distraction-free writing experience.",
+        badges: [
+            { label: "Type", value: "Publishing Platform" },
+            { label: "Role", value: "Full Stack Developer" },
+            { label: "Timeline", value: "2024" },
+            { label: "Status", value: "Completed" }
+        ],
+        techStack: [
+            "Next.js 15",
+            "React 19",
+            "Tiptap",
+            "TanStack Query",
+            "Zod",
+            "Prisma ORM",
+            "PostgreSQL",
+            "NextAuth"
+        ],
+        actions: [
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "https://github.com/", type: "secondary" }
+        ],
+        heroImage: "/projects/devloom/1.png",
+        gallery: [
+            { src: "/projects/devloom/1.png", alt: "DevLoom Homepage", type: "desktop" },
+            { src: "/projects/devloom/2.png", alt: "Article View", type: "desktop" },
+            { src: "/projects/devloom/3.png", alt: "Rich Text Editor", type: "desktop" },
+            { src: "/projects/devloom/4.png", alt: "Admin Dashboard Analytics", type: "desktop" },
+            { src: "/projects/devloom/5.png", alt: "User Profile and Posts", type: "mobile" }
+        ],
+        overview: {
+            description: "DevLoom is a comprehensive publishing platform specifically designed for developers. Built with Next.js 15 and React 19, it features a distraction-free Tiptap rich text editor, robust data validation, and an interactive admin dashboard. The platform handles complex nested relations with Prisma and implements robust SEO optimizations including dynamic sitemaps and JSON-LD structured data.",
+            audience: "Developers, technical writers, and software engineering teams looking for a dedicated space to share knowledge, tutorials, and insights.",
+            goal: "To master the modern Next.js ecosystem by building an end-to-end application, solving real-world challenges like server component optimization, complex database relations, and responsive UI design."
+        },
+        features: [
+            {
+                icon: "✍️",
+                title: "Rich Text Editor",
+                description: "Distraction-free writing experience powered by Tiptap with support for code blocks, formatting, and media integration."
+            },
+            {
+                icon: "🛡️",
+                title: "Secure Authentication",
+                description: "Role-based access control (Admin/User) implemented via NextAuth for secure account management."
+            },
+            {
+                icon: "📊",
+                title: "Admin Dashboard",
+                description: "Interactive analytics dashboard using Recharts to track post engagement, views, and overall platform metrics."
+            },
+            {
+                icon: "🖼️",
+                title: "Media Management",
+                description: "Seamless image upload and optimization pipeline using Cloudinary integration."
+            },
+            {
+                icon: "🔍",
+                title: "SEO Optimization",
+                description: "Advanced Next.js SEO capabilities including dynamic sitemaps, JSON-LD Article schema, and web manifest."
+            },
+            {
+                icon: "💾",
+                title: "Robust Database Architecture",
+                description: "Efficient data management using Prisma ORM with PostgreSQL, handling complex nested relations seamlessly."
+            },
+            {
+                icon: "⚡",
+                title: "Optimized Performance",
+                description: "Efficient data fetching and state management utilizing TanStack Query and Zod for type-safe validation."
+            }
+        ],
+        stack: {
+            frontend: [
+                "Next.js 15 (App Router)",
+                "React 19",
+                "Tiptap (Rich Text Editor)",
+                "Recharts (Data Visualization)"
+            ],
+            backend: [
+                "Next.js API Routes",
+                "NextAuth (Authentication)",
+                "Prisma ORM"
+            ],
+            database: [
+                "PostgreSQL"
+            ],
+            apis: [
+                "Cloudinary API"
+            ],
+            tools: [
+                "TanStack Query",
+                "Zod (Validation)",
+                "Dynamic Sitemaps",
+                "JSON-LD Schema"
+            ]
+        },
+        navigation: {
+            prev: { title: 'AI DOC CHAT', slug: 'aidocchat' },
             next: null
         }
     },
