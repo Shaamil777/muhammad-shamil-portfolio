@@ -981,6 +981,195 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: { title: 'AI DOC CHAT', slug: 'aidocchat' },
+            next: { title: 'NOOZI', slug: 'noozi' }
+        }
+    },
+    noozi: {
+        slug: "noozi",
+        title: "Noozi Creative Studio",
+        summary: "A visually immersive portfolio and digital experience platform built with Vite + React + TypeScript, focused on delivering high-end UI interactions, smooth animations, and modern web performance.",
+        badges: [
+            { label: "Type", value: "Creative Portfolio" },
+            { label: "Role", value: "Frontend Developer" },
+            { label: "Timeline", value: "2025" },
+            { label: "Status", value: "Completed" }
+        ],
+        techStack: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Swiper.js"
+        ],
+        actions: [
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
+        ],
+        heroImage: "/projects/noozi/1.png",
+        gallery: [
+            { src: "/projects/noozi/1.png", alt: "Noozi Hero & Landing", type: "desktop" },
+            { src: "/projects/noozi/2.png", alt: "Creative Showcase Section", type: "desktop" },
+            { src: "/projects/noozi/3.png", alt: "Project Gallery & Interactions", type: "desktop" },
+            { src: "/projects/noozi/4.png", alt: "Services & Contact", type: "desktop" }
+        ],
+        overview: {
+            description: "Noozi Creative Studio is a visually immersive portfolio and digital experience platform built using Vite + React + TypeScript, focused on delivering high-end UI interactions, smooth animations, and modern web performance. Unlike typical portfolio sites, this project emphasizes motion design, visual storytelling, and user engagement rather than just static content display. It is designed to showcase creative work, projects, and services in a way that feels dynamic, premium, and interactive.",
+            audience: "Creative professionals, agencies, designers, and brands seeking a premium digital portfolio experience that goes beyond static content.",
+            goal: "To build a portfolio that feels premium and performs like a product — not just a static showcase — demonstrating strong control over advanced UI/UX, animation systems, and scalable component architecture."
+        },
+        features: [
+            {
+                icon: "🎨",
+                title: "Advanced UI/UX Design",
+                description: "Clean, modern interface with a strong focus on visual hierarchy, aesthetics, and premium design patterns that feel alive and engaging."
+            },
+            {
+                icon: "🎞️",
+                title: "Smooth Animations & Transitions",
+                description: "Built using Framer Motion for fluid user interactions, cinematic transitions, and dynamic motion design throughout the experience."
+            },
+            {
+                icon: "⚡",
+                title: "Optimized Performance with Vite",
+                description: "Fast dev server, instant HMR, and optimized production builds ensuring lightning-fast load times and smooth browsing."
+            },
+            {
+                icon: "📱",
+                title: "Fully Responsive Layout",
+                description: "Works seamlessly across mobile, tablet, and desktop devices with adaptive layouts and touch-friendly interactions."
+            },
+            {
+                icon: "🧩",
+                title: "Modular Component Architecture",
+                description: "Reusable and scalable code structure built for maintainability, clean separation of concerns, and easy extensibility."
+            },
+            {
+                icon: "🖼️",
+                title: "Interactive Content Sections",
+                description: "Dynamic project showcases, creative layouts, engaging scroll experiences, and interactive sliders that bring content to life."
+            }
+        ],
+        stack: {
+            frontend: [
+                "React",
+                "TypeScript",
+                "Vite Build Tool",
+                "Tailwind CSS",
+                "Framer Motion",
+                "Swiper.js"
+            ],
+            animations: [
+                "Framer Motion (Page Transitions)",
+                "Custom CSS Animations",
+                "Scroll-Driven Effects",
+                "Interactive Hover States"
+            ],
+            tools: [
+                "Vite Development Server",
+                "ESLint",
+                "PostCSS",
+                "Autoprefixer",
+                "TypeScript Compiler"
+            ]
+        },
+        navigation: {
+            prev: { title: 'DEVLOOM', slug: 'devloom' },
+            next: { title: 'AUTONEXIS', slug: 'autonexis' }
+        }
+    },
+    autonexis: {
+        slug: "autonexis",
+        title: "AutoNexis",
+        summary: "An event-driven order processing system designed to handle failures, retries, and asynchronous workflows in distributed environments — built around resilience, not just functionality.",
+        badges: [
+            { label: "Type", value: "Backend System" },
+            { label: "Role", value: "Backend Developer" },
+            { label: "Timeline", value: "2025" },
+            { label: "Status", value: "Completed" }
+        ],
+        techStack: [
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "n8n",
+            "Event-Driven Architecture"
+        ],
+        actions: [
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
+        ],
+        heroImage: "/projects/AutoNexis/1.png",
+        gallery: [
+            { src: "/projects/AutoNexis/1.png", alt: "System Architecture Overview", type: "desktop" },
+            { src: "/projects/AutoNexis/2.jpg", alt: "n8n Workflow Automation", type: "desktop" },
+            { src: "/projects/AutoNexis/3.png", alt: "Event Queue Dashboard", type: "desktop" },
+            { src: "/projects/AutoNexis/4.png", alt: "Order Processing Flow", type: "desktop" },
+            { src: "/projects/AutoNexis/5.png", alt: "Monitoring & Logging", type: "desktop" }
+        ],
+        overview: {
+            description: "AutoNexis is an event-driven order processing system designed to handle failures, retries, and asynchronous workflows in distributed environments. Instead of relying on fragile synchronous flows, the system uses event queues and automation pipelines to ensure that every order is processed reliably — even when parts of the system fail. This is not a CRUD project. It demonstrates how to design resilient backend systems with failure handling, retries, and eventual consistency.",
+            audience: "Backend engineers, system architects, and teams building distributed systems that need to handle partial failures gracefully.",
+            goal: "Build a backend system that doesn't collapse when something fails. Most beginner projects ignore failure — this one is built around it."
+        },
+        features: [
+            {
+                icon: "\uD83D\uDD04",
+                title: "Event-Driven Order Processing",
+                description: "Orders are processed asynchronously through event queues instead of direct API chaining, ensuring loose coupling and reliability."
+            },
+            {
+                icon: "\u274C",
+                title: "Failure Handling & Retry Logic",
+                description: "Failed events are automatically retried with exponential backoff or redirected to a Dead Letter Queue for manual recovery."
+            },
+            {
+                icon: "\uD83E\uDDFE",
+                title: "Event Queue System",
+                description: "Persistent queue ensures no data loss during failures or downtime, maintaining order integrity across the system."
+            },
+            {
+                icon: "\uD83D\uDD01",
+                title: "Automated Workflows via n8n",
+                description: "Background processes and workflow orchestration handled via n8n automation engine for reliable, repeatable operations."
+            },
+            {
+                icon: "\uD83D\uDCCA",
+                title: "Logging & Monitoring",
+                description: "Comprehensive event tracking and failure logging for debugging, observability, and system reliability analysis."
+            },
+            {
+                icon: "\uD83E\uDDE9",
+                title: "Decoupled Architecture",
+                description: "Services operate independently with clear boundaries, reducing system-wide failure impact and improving maintainability."
+            }
+        ],
+        stack: {
+            backend: [
+                "Node.js",
+                "Express.js",
+                "RESTful API Design",
+                "Event-Driven Architecture"
+            ],
+            database: [
+                "PostgreSQL",
+                "Prisma ORM"
+            ],
+            automation: [
+                "n8n (Workflow Automation)",
+                "Event Queue Processing",
+                "Retry & Recovery Pipelines",
+                "Dead Letter Queue (DLQ)"
+            ],
+            tools: [
+                "Exponential Backoff Retry",
+                "Structured Logging",
+                "Environment Configuration",
+                "Nodemon (Development)"
+            ]
+        },
+        navigation: {
+            prev: { title: 'NOOZI', slug: 'noozi' },
             next: null
         }
     },

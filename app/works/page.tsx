@@ -10,7 +10,9 @@ const projects = [
   { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT' },
   { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE' },
   { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION' },
-  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' }
+  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' },
+  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO' },
+  { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS' }
 ];
 
 export default function Works() {
