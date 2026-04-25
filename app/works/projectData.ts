@@ -155,7 +155,7 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'AMRITHA', slug: 'amrithaheritage' },
+            prev: { title: 'OPEN DOOR', slug: 'opendoor' },
             next: { title: 'LAPO', slug: 'lapo' }
         }
     },
@@ -278,8 +278,8 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: null,
-            next: { slug: 'amrithaheritage', title: 'AMRITHA' }
+            prev: { title: 'AMRITHA', slug: 'amrithaheritage' },
+            next: { title: 'URBANWORN', slug: 'urbanworn' }
         }
     },
 
@@ -412,8 +412,8 @@ const projects: Record<string, ProjectData> = {
         },
 
         navigation: {
-            prev: { slug: "opendoor", title: "Open Door" },
-            next: { slug: "urbanworn", title: "UrbanWorn" }
+            prev: { title: 'DEVLOOM', slug: 'devloom' },
+            next: { title: 'OPEN DOOR', slug: 'opendoor' }
         }
     },
 
@@ -877,7 +877,7 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: { title: 'EVENTO', slug: 'evento' },
-            next: { title: 'DEVLOOM', slug: 'devloom' }
+            next: null
         }
     },
     devloom: {
@@ -980,8 +980,8 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'AI DOC CHAT', slug: 'aidocchat' },
-            next: { title: 'NOOZI', slug: 'noozi' }
+            prev: { title: 'NOOZI', slug: 'noozi' },
+            next: { title: 'AMRITHA', slug: 'amrithaheritage' }
         }
     },
     noozi: {
@@ -1074,8 +1074,8 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'DEVLOOM', slug: 'devloom' },
-            next: { title: 'AUTONEXIS', slug: 'autonexis' }
+            prev: { title: 'AUTONEXIS', slug: 'autonexis' },
+            next: { title: 'DEVLOOM', slug: 'devloom' }
         }
     },
     autonexis: {
@@ -1169,8 +1169,8 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'NOOZI', slug: 'noozi' },
-            next: null
+            prev: null,
+            next: { title: 'NOOZI', slug: 'noozi' }
         }
     },
 };

@@ -3,16 +3,16 @@
 import TransitionLink from '../components/TransitionLink';
 
 const projects = [
-  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY' },
+  { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS' },
+  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO' },
+  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' },
   { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY' },
+  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY' },
   { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT' },
   { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES' },
   { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT' },
   { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE' },
-  { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION' },
-  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' },
-  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO' },
-  { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS' }
+  { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION' }
 ];
 
 export default function Works() {
