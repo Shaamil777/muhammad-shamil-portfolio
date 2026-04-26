@@ -8,6 +8,7 @@ export const metadata: Metadata = {
         canonical: 'https://muhammadshamil.vercel.app/works',
     },
     openGraph: {
+        // ji
         title: 'Works — Muhammad Shamil | Portfolio',
         description:
             'Browse real-world projects including Open Door, Amritha Heritage, UrbanWorn, Lapo Cart, CAFCOHOME, and Evento — built with React, Next.js, Node.js, and MongoDB.',
