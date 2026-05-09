@@ -76,7 +76,7 @@ export default function AboutPage() {
             <h3 className="about-section-title font-cormorant">Skills</h3>
 
             <p className="about-skills-list">
-              MERN Stack Development / JavaScript & TypeScript / React & Next.js / Node.js & Express.js / MongoDB & SQL Databases / REST API Development / Authentication & Authorization (JWT, Roles) / Redux & Context API / Admin Dashboards & Role-Based Systems / Payment Integration (Razorpay) / Real-Time Features / Database Design / Responsive UI Development / Git & Version Control / Deployment & Hosting (Vercel, Render, AWS, Nginx)
+              MERN Stack Development / JavaScript & TypeScript / React & Next.js / Node.js, Express.js & NestJS / Django REST API / MongoDB, PostgreSQL & Prisma ORM / REST API Development / Authentication (JWT, NextAuth, Roles) / State Management (Redux, Context API, TanStack Query) / Admin Dashboards & Role-Based Systems / UI & Animations (Tailwind CSS, Framer Motion, Lenis) / Payment Integration (Razorpay) / AI & Vector DBs (Gemini, ChromaDB, RAG) / Event-Driven Architecture (n8n) / Docker & Containerization / API Documentation (Swagger) / Data Validation (Zod) / Real-Time Features / Database Design / Git & Version Control / Deployment & Hosting (Vercel, Render, AWS, Nginx)
             </p>
           </div>
         </div>
