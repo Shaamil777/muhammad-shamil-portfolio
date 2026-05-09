@@ -1074,7 +1074,7 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'AUTONEXIS', slug: 'autonexis' },
+            prev: { title: 'MICROSTORE', slug: 'microstore' },
             next: { title: 'DEVLOOM', slug: 'devloom' }
         }
     },
@@ -1170,6 +1170,105 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: null,
+            next: { title: 'MICROSTORE', slug: 'microstore' }
+        }
+    },
+    microstore: {
+        slug: "microstore",
+        title: "MicroStore",
+        summary: "A Dockerized ecommerce backend system built using a microservices architecture with Node.js, Express, MongoDB, JWT authentication, and an API Gateway pattern.",
+        badges: [
+            { label: "Type", value: "Backend System" },
+            { label: "Role", value: "Backend Developer" },
+            { label: "Timeline", value: "2024" },
+            { label: "Status", value: "Completed" }
+        ],
+        techStack: [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Mongoose",
+            "JWT",
+            "Docker",
+            "Zod",
+            "Swagger"
+        ],
+        actions: [
+            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Code", href: "https://github.com/Shaamil777", type: "secondary" }
+        ],
+        heroImage: "",
+        gallery: [],
+        overview: {
+            description: "A Dockerized ecommerce backend system built using a microservices architecture. It uses an API Gateway as the single entry point for all incoming client requests, forwarding them to independent services: Auth Service, Product Service, and Order Service. This project was created to move beyond traditional monolithic CRUD applications and understand scalable backend systems in production-style environments.",
+            audience: "Developers and software engineers interested in microservices architecture, API gateways, and scalable backend design.",
+            goal: "To build a robust, scalable backend system demonstrating microservices separation, JWT authentication flows, service-to-service communication, and Dockerized deployment."
+        },
+        features: [
+            {
+                icon: "🚪",
+                title: "API Gateway Pattern",
+                description: "Central entry point for all incoming client requests, handling request forwarding, route management, and authorization header forwarding."
+            },
+            {
+                icon: "🔐",
+                title: "Advanced Authentication",
+                description: "Secure JWT-based authentication using Access and Refresh tokens with role-based access control (RBAC) for route protection."
+            },
+            {
+                icon: "📦",
+                title: "Product & Order Services",
+                description: "Independent services for handling product catalogs and order processing, demonstrating service-to-service communication using Axios."
+            },
+            {
+                icon: "🛡️",
+                title: "Robust Validation",
+                description: "Comprehensive request validation across all services using Zod for schemas, ensuring clean request handling and early error detection."
+            },
+            {
+                icon: "🐳",
+                title: "Dockerized Architecture",
+                description: "Complete system containerized using Docker Compose, including API Gateway, independent services, and MongoDB."
+            },
+            {
+                icon: "⚠️",
+                title: "Centralized Error Handling",
+                description: "Consistent API error responses and async error management implemented across all microservices."
+            },
+            {
+                icon: "📚",
+                title: "Interactive Documentation",
+                description: "Integrated Swagger/OpenAPI documentation for all APIs, enabling interactive testing and easier integration."
+            }
+        ],
+        stack: {
+            backend: [
+                "Node.js",
+                "Express.js",
+                "Microservices Architecture",
+                "API Gateway Pattern"
+            ],
+            database: [
+                "MongoDB",
+                "Mongoose ODM"
+            ],
+            auth: [
+                "JWT (Access & Refresh Tokens)",
+                "Bcrypt",
+                "Role-Based Access Control"
+            ],
+            devops: [
+                "Docker",
+                "Docker Compose"
+            ],
+            tools: [
+                "Zod (Validation)",
+                "Swagger / OpenAPI",
+                "Axios (Service Communication)"
+            ]
+        },
+        navigation: {
+            prev: { title: 'AUTONEXIS', slug: 'autonexis' },
             next: { title: 'NOOZI', slug: 'noozi' }
         }
     },

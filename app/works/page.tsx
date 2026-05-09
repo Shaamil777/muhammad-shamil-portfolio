@@ -4,6 +4,7 @@ import TransitionLink from '../components/TransitionLink';
 
 const projects = [
   { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS' },
+  { name: 'MICROSTORE', slug: 'microstore', category: 'MICROSERVICES ARCHITECTURE' },
   { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO' },
   { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' },
   { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY' },
