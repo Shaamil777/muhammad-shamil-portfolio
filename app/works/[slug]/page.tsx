@@ -26,7 +26,6 @@ export default function ProjectDetail() {
     return (
         <div className="pd-container">
 
-            {/* 1. Hero Section */}
             <section className="pd-hero" id="pd-hero">
                 <div className="pd-hero-inner">
                     <p className="pd-hero-label content-reveal pd-reveal-1">PROJECT</p>
@@ -37,7 +36,6 @@ export default function ProjectDetail() {
                         {project.summary}
                     </p>
 
-                    {/* Badges */}
                     <div className="pd-badges content-reveal pd-reveal-2">
                         {project.badges.map((badge) => (
                             <div key={badge.label} className="pd-badge">
@@ -47,14 +45,12 @@ export default function ProjectDetail() {
                         ))}
                     </div>
 
-                    {/* Tech Stack Tags */}
                     <div className="pd-tech-tags content-reveal pd-reveal-3">
                         {project.techStack.map((tech) => (
                             <span key={tech} className="pd-tech-tag">{tech}</span>
                         ))}
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="pd-actions content-reveal pd-reveal-3">
                         {project.actions.map((action) => (
                             <a
@@ -78,7 +74,6 @@ export default function ProjectDetail() {
                 </div>
             </section>
 
-            {/* 2. Visual Showcase */}
             <section className="pd-showcase content-reveal pd-reveal-4" id="pd-showcase">
                 {project.gallery.length > 0 && (
                     <div className="pd-showcase-featured">
@@ -104,10 +99,8 @@ export default function ProjectDetail() {
                 )}
             </section>
 
-            {/* Content sections wrapper */}
             <div className="pd-content-wrapper">
 
-                {/* 3. Project Overview */}
                 <section className="pd-section" id="pd-overview">
                     <div className="pd-section-header">
                         <span className="pd-section-number">01</span>
@@ -132,7 +125,6 @@ export default function ProjectDetail() {
 
 
 
-                {/* 6. Key Features */}
                 <section className="pd-section" id="pd-features">
                     <div className="pd-section-header">
                         <span className="pd-section-number">02</span>
@@ -151,7 +143,6 @@ export default function ProjectDetail() {
                     </div>
                 </section>
 
-                {/* 7. Technology Stack */}
                 <section className="pd-section" id="pd-stack">
                     <div className="pd-section-header">
                         <span className="pd-section-number">03</span>
@@ -180,7 +171,6 @@ export default function ProjectDetail() {
 
 
 
-                {/* 10. Project Navigation */}
                 <section className="pd-navigation" id="pd-navigation">
                     <div className="pd-nav-inner">
                         <div className="pd-nav-side pd-nav-prev">

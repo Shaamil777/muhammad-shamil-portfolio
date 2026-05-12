@@ -7,22 +7,18 @@ export default function Home() {
   const [isReturn, setIsReturn] = useState(false);
 
   useEffect(() => {
-    // Check if the site has been loaded before (i.e., this is a return visit)
     const hasVisited = sessionStorage.getItem('hasVisitedHome');
     if (hasVisited) {
       setIsReturn(true);
     } else {
-      // Mark that the initial load has happened
       sessionStorage.setItem('hasVisitedHome', 'true');
     }
   }, []);
 
-  // Use fast delays on return, slow delays on initial load
   const r = (n: number) => `content-reveal ${isReturn ? `content-reveal-fast-${n}` : `content-reveal-${n}`}`;
 
   return (
     <div className="home-container min-h-screen w-full flex flex-col md:flex-row">
-      {/* Left side - Content area for paragraph */}
       <div className="w-full md:w-1/2 p-8 pt-24 md:p-12 md:pt-110 flex items-center justify-center">
         <div className="max-w-md">
           <div className="mb-8">
@@ -39,7 +35,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Right side - Navigation Links */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center py-12 md:py-0 pr-0 md:pr-55 space-y-4 md:space-y-6">
         <TransitionLink href="/works" className={`${r(3)} nav-link text-[4.5rem] sm:text-[7rem] md:text-[12rem] pr-0 md:pr-90 tracking-wider leading-none`}>
           WORK

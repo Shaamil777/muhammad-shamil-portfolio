@@ -19,7 +19,6 @@ const projects = [
 export default function Works() {
   return (
     <div className="works-container">
-      {/* Left side - Description */}
       <div className="works-left content-reveal works-reveal-1">
         <h2 className="works-label">WORK</h2>
         <p className="works-description">
@@ -35,7 +34,6 @@ export default function Works() {
         </p>
       </div>
 
-      {/* Right side - Project Names */}
       <div className="works-right">
         {projects.map((project, index) => (
           <div key={project.slug} className={`works-project-item content-reveal works-reveal-${index + 1}`}>
