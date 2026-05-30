@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
 
-  // Open Graph — Facebook, LinkedIn, WhatsApp, etc.
   openGraph: {
     type: 'website',
     url: siteUrl,
@@ -63,7 +62,6 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
 
-  // Twitter Card
   twitter: {
     card: 'summary_large_image',
     title: 'Muhammad Shamil — Full-stack Web Developer',
@@ -72,7 +70,6 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -127,10 +124,8 @@ export default function RootLayout({
       >
         <PageTransitionProvider>
           <LoadingOverlay>
-            {/* Desktop Navigation */}
             <DesktopNavigation />
 
-            {/* Main Content */}
             <div>
               {children}
             </div>

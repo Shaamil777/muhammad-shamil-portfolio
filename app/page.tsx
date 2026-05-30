@@ -21,15 +21,15 @@ export default function Home() {
     <div className="home-container min-h-screen w-full flex flex-col md:flex-row">
       <div className="w-full md:w-1/2 p-8 pt-24 md:p-12 md:pt-110 flex items-center justify-center">
         <div className="max-w-md">
-          <div className="mb-8">
-            <h2 className={`${r(1)} text-1xl mb-4 text-white font-normal`}>
+          <div className="mb-8" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <h2 className={`${r(1)} text-1xl mb-4 text-white font-normal font-[family-name:var(--font-geist-sans)]`}>
               MUHAMMAD SHAMIL
             </h2>
             <p className={`${r(2)} description-text text-md leading-relaxed`}>
-              Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.
+              Full-stack software engineer specializing in scalable architectures and digital experiences. With a diverse portfolio spanning event-driven microservices, creative platforms, and robust e-commerce solutions, I build elegant, high-performance products from end to end.
             </p>
-            <p className={`${r(3)} description-text text-md leading-relaxed mt-4`}>
-              Full-stack Web Developer · MERN
+            <p className={`${r(3)} description-text text-md leading-relaxed mt-4 opacity-80`}>
+              Full-Stack Engineering · Systems Architecture · Digital Experiences
             </p>
           </div>
         </div>

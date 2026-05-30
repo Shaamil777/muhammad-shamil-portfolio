@@ -1,22 +1,40 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import TransitionLink from '../components/TransitionLink';
 
 const projects = [
-  { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS' },
-  { name: 'MICROSTORE', slug: 'microstore', category: 'MICROSERVICES ARCHITECTURE' },
-  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO' },
-  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM' },
-  { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY' },
-  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY' },
-  { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT' },
-  { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES' },
-  { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT' },
-  { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE' },
-  { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION' }
+  { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS', image: '/projects/AutoNexis/1.png' },
+  { name: 'MICROSTORE', slug: 'microstore', category: 'MICROSERVICES ARCHITECTURE', image: null },
+  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO', image: '/projects/noozi/1.png' },
+  { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM', image: '/projects/devloom/1.png' },
+  { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY', image: '/projects/amritha/01.webp' },
+  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY', image: '/projects/opendoor/hero-section.webp' },
+  { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT', image: null },
+  { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES', image: '/projects/lapo/01.webp' },
+  { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT', image: '/projects/cafco/01.webp' },
+  { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE', image: null },
+  { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION', image: '/projects/aidocchat/1.png' }
 ];
 
 export default function Works() {
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
     <div className="works-container">
       <div className="works-left content-reveal works-reveal-1">
@@ -36,7 +54,12 @@ export default function Works() {
 
       <div className="works-right">
         {projects.map((project, index) => (
-          <div key={project.slug} className={`works-project-item content-reveal works-reveal-${index + 1}`}>
+          <div 
+            key={project.slug} 
+            className={`works-project-item content-reveal works-reveal-${index + 1}`}
+            onMouseEnter={() => setHoveredImage(project.image)}
+            onMouseLeave={() => setHoveredImage(null)}
+          >
             <TransitionLink href={`/works/${project.slug}`} className="works-project-name font-cormorant">
               {project.name}
             </TransitionLink>
@@ -44,6 +67,26 @@ export default function Works() {
           </div>
         ))}
       </div>
+
+      {mounted && hoveredImage && createPortal(
+        <div 
+          className="pointer-events-none fixed z-50 overflow-hidden rounded-lg shadow-2xl transition-transform duration-100 ease-out"
+          style={{
+            left: `${mousePos.x}px`,
+            top: `${mousePos.y}px`,
+            transform: 'translate(-50%, -50%)',
+            width: '350px',
+            height: '250px'
+          }}
+        >
+          <img 
+            src={hoveredImage} 
+            alt="Work preview" 
+            className="w-full h-full object-cover"
+          />
+        </div>,
+        document.body
+      )}
     </div>
   );
 }

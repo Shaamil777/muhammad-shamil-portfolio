@@ -9,7 +9,6 @@ export default function DesktopNavigation() {
   const isProjectDetail = pathname.startsWith('/works/');
   const isLightBgPage = (pathname === '/contact' || pathname === '/works') && !isProjectDetail;
 
-  // Use dark colors on light background pages (contact, works), white colors elsewhere
   const textColor = isLightBgPage ? 'text-[#1a1a18]/60' : 'text-white/60';
   const textHoverColor = isLightBgPage ? 'hover:text-[#1a1a18]' : 'hover:text-white';
   const lineColor = isLightBgPage ? 'bg-[#1a1a18]/30' : 'bg-white/30';
@@ -19,7 +18,6 @@ export default function DesktopNavigation() {
     <div className="fixed left-4 top-8 z-50 hidden md:flex flex-col items-center space-y-8">
       {isHomePage ? (
         <>
-          {/* Social Links - Only shown on home page */}
           <a
             href="https://github.com/Shaamil777"
             target="_blank"
@@ -65,7 +63,6 @@ export default function DesktopNavigation() {
           </a>
         </>
       ) : (
-        /* Home Link - Shown on all pages except home */
         <TransitionLink
           href="/"
           className={`${textColor} ${textHoverColor} transition-colors duration-200 text-xs font-light tracking-widest uppercase transform -rotate-90 whitespace-nowrap`}
@@ -74,10 +71,8 @@ export default function DesktopNavigation() {
         </TransitionLink>
       )}
 
-      {/* Vertical Line */}
       <div className={`w-px h-32 ${lineColor} mt-4`}></div>
 
-      {/* Copyright */}
       <div className={`${copyrightColor} text-xs mt-4 transform -rotate-90 whitespace-nowrap`}>
         @2026
       </div>
