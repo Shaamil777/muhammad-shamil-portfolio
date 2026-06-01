@@ -9,6 +9,7 @@ export default function Home() {
   useEffect(() => {
     const hasVisited = sessionStorage.getItem('hasVisitedHome');
     if (hasVisited) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsReturn(true);
     } else {
       sessionStorage.setItem('hasVisitedHome', 'true');

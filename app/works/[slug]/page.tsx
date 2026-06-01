@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react/no-unescaped-entities, @next/next/no-img-element */
 
 import { useParams } from 'next/navigation';
 import { getProject } from '../projectData';

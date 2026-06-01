@@ -50,7 +50,6 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
         const defaultDirection = isProjectDetail ? 'down' : (pageDirections[href] || 'down');
 
         const newDirection = direction || defaultDirection;
-        console.log('Starting transition to:', href, 'direction:', newDirection);
 
         setIsTransitioning(true);
         setTransitionColor(color || defaultColor);
@@ -63,7 +62,6 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
         }, 50);
 
         setTimeout(() => {
-            console.log('Overlay covered, navigating...');
             setOverlayState('covering');
             router.push(href);
         }, 700);
@@ -71,7 +69,6 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
 
     useEffect(() => {
         if (previousPathRef.current !== pathname && overlayState === 'covering') {
-            console.log('Navigation complete, starting exit animation');
             setTimeout(() => {
                 setOverlayState('exiting');
             }, 100);
@@ -82,7 +79,6 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
     useEffect(() => {
         if (overlayState === 'exiting') {
             const timer = setTimeout(() => {
-                console.log('Transition complete');
                 setOverlayState('hidden');
                 setIsTransitioning(false);
             }, 600);
