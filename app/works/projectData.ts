@@ -877,6 +877,143 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: { title: 'EVENTO', slug: 'evento' },
+            next: { title: 'OJAS THEERAM', slug: 'ojastheeram' }
+        }
+    },
+    ojastheeram: {
+        slug: "ojastheeram",
+        title: "Ojas Theeram",
+        summary: "A premium, cinematic website for an Ayurvedic wellness clinic featuring scroll-driven animations, WebGL effects, WhatsApp booking integration, and comprehensive SEO — built with Next.js 16, React 19, Framer Motion, and Tailwind CSS v4.",
+        badges: [
+            { label: "Type", value: "Healthcare — Ayurvedic Wellness" },
+            { label: "Role", value: "Full Stack Developer" },
+            { label: "Timeline", value: "2025" },
+            { label: "Status", value: "Live" }
+        ],
+        techStack: [
+            "Next.js 16",
+            "React 19",
+            "TypeScript",
+            "Tailwind CSS v4",
+            "Framer Motion",
+            "Lenis",
+            "WebGL (react-water-wave)",
+            "Lucide React",
+            "WhatsApp API",
+            "Google Maps",
+            "JSON-LD Structured Data"
+        ],
+        actions: [
+            { label: "View Live Site", href: "https://ojastheeram.com", type: "primary" },
+            { label: "View Code", href: "#", type: "secondary" }
+        ],
+        heroImage: "/projects/Ojas/1.png",
+        gallery: [
+            { src: "/projects/Ojas/1.png", alt: "Hero Section — Full-screen cinematic video with staggered text reveal", type: "desktop" },
+            { src: "/projects/Ojas/2.png", alt: "Scroll-Driven Experience — Circle reveal & shutter wipe transitions", type: "desktop" },
+            { src: "/projects/Ojas/3.png", alt: "Treatments & Wellness Packages", type: "desktop" },
+            { src: "/projects/Ojas/4.png", alt: "Doctor Profile — Split-screen parallax entry", type: "desktop" },
+            { src: "/projects/Ojas/5.png", alt: "Products & WhatsApp Integration", type: "desktop" },
+            { src: "/projects/Ojas/6.png", alt: "Location & Contact Section", type: "desktop" }
+        ],
+        overview: {
+            description: "Ojas Theeram is a premium, cinematic website for an authentic Ayurvedic wellness clinic in Bengaluru. The site showcases the clinic's Panchakarma treatments, individual therapies, wellness packages, doctor profiles, and products — all with a luxury editorial aesthetic and high-end scroll-driven animations. Built as a fully static, SEO-optimized Next.js application with 13 distinct homepage sections, each featuring unique animation systems including clip-path circle reveals, 5-column shutter wipe transitions, and mouse-tracking parallax with three independent depth layers.",
+            audience: "Health-conscious individuals seeking authentic Ayurvedic treatments, wellness tourists visiting Bengaluru, and patients looking for Panchakarma therapy, specialized care, and premium wellness experiences.",
+            goal: "To create an immersive, luxury digital presence that reflects the clinic's premium positioning, drives WhatsApp-based booking inquiries, and ranks strongly in local healthcare search results through comprehensive SEO implementation."
+        },
+        features: [
+            {
+                icon: "🎬",
+                title: "Cinematic Scroll-Driven Animations",
+                description: "13 homepage sections with unique scroll-driven effects including clip-path circle reveals, 5-column shutter wipe transitions, spring-physics parallax, and idle floating leaf animations."
+            },
+            {
+                icon: "🌊",
+                title: "WebGL Water Ripple Effect",
+                description: "Interactive WebGL water ripple effect on background images using react-water-wave, providing immersive interactivity on desktop with graceful mobile degradation."
+            },
+            {
+                icon: "📱",
+                title: "2-Step WhatsApp Booking Modal",
+                description: "Animated booking form that collects personal details and service selection, then generates pre-formatted WhatsApp messages for direct appointment scheduling."
+            },
+            {
+                icon: "🔍",
+                title: "Comprehensive SEO Implementation",
+                description: "JSON-LD MedicalBusiness schema, dynamic sitemap, per-page Open Graph/Twitter meta tags, robots.txt, canonical URLs, and Google Search Console integration."
+            },
+            {
+                icon: "🎨",
+                title: "Luxury Editorial Design System",
+                description: "7 custom font families, CSS custom properties bridged into Tailwind v4's @theme, dark cinematic sections contrasting with warm off-white sections, and glassmorphic overlays."
+            },
+            {
+                icon: "👨‍⚕️",
+                title: "Interactive Doctor Profile",
+                description: "Split-screen parallax entry with doctor qualifications, specialties, expandable certifications accordion, and adaptive mobile card-overlay pattern."
+            },
+            {
+                icon: "🧘",
+                title: "5-Phase Cinematic Slider",
+                description: "Scroll-driven slider showcasing the Ayurvedic treatment journey (Consultation → Diagnosis → Treatment → Recovery → Balance) with film strip background track and touch-swipe mobile carousel."
+            },
+            {
+                icon: "⚡",
+                title: "Adaptive Performance System",
+                description: "GPU-heavy effects gracefully degrade on mobile — water ripple disabled, blur replaced with opacity wash, dynamic imports for below-fold sections, and lazy-loaded iframes."
+            },
+            {
+                icon: "🌿",
+                title: "Multi-Layer Parallax Scenes",
+                description: "Mouse-tracking parallax with 3 independent depth layers (background, subject, text) creating immersive visual depth throughout the site."
+            },
+            {
+                icon: "📍",
+                title: "Google Maps Integration",
+                description: "Custom-themed dark Google Maps embed with desaturated styling, GPS coordinates display, and comprehensive contact information cards."
+            }
+        ],
+        stack: {
+            frontend: [
+                "Next.js 16.2.2 (App Router)",
+                "React 19.2.4",
+                "TypeScript 5",
+                "Tailwind CSS v4",
+                "Framer Motion 12.38.0",
+                "Lenis 1.3.21 (Smooth Scroll)",
+                "react-water-wave 2.0.1 (WebGL)"
+            ],
+            styling: [
+                "CSS Custom Properties (Design Tokens)",
+                "@tailwindcss/postcss v4",
+                "Glassmorphism (backdrop-blur)",
+                "7 Font Families (Gallient, Cormorant Garamond, Instrument Serif, Space Grotesk, Barlow Condensed, Geist Sans, Geist Mono)"
+            ],
+            animations: [
+                "Scroll-Driven Animations (useScroll + useTransform)",
+                "Spring Physics (useSpring)",
+                "Stagger Reveals (staggerChildren)",
+                "Viewport Triggers (whileInView)",
+                "CSS clip-path Transitions (circle, inset)",
+                "Color Blend Interpolation"
+            ],
+            seo: [
+                "JSON-LD MedicalBusiness Schema",
+                "Dynamic Sitemap Generation",
+                "Per-Page Open Graph & Twitter Cards",
+                "Google Search Console Integration",
+                "Canonical URLs"
+            ],
+            tools: [
+                "Lucide React (Icons)",
+                "Dynamic Imports (Code Splitting)",
+                "Next.js Image Optimization (WebP)",
+                "WhatsApp Business API Integration",
+                "Google Maps Embed API"
+            ]
+        },
+        navigation: {
+            prev: { title: 'AI DOC CHAT', slug: 'aidocchat' },
             next: null
         }
     },

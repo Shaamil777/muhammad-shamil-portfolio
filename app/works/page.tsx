@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom';
 import TransitionLink from '../components/TransitionLink';
 
 const projects = [
+  { name: 'OJAS THEERAM', slug: 'ojastheeram', category: 'AYURVEDIC WELLNESS', image: '/projects/Ojas/1.png' },
   { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS', image: '/projects/AutoNexis/1.png' },
   { name: 'MICROSTORE', slug: 'microstore', category: 'MICROSERVICES ARCHITECTURE', image: null },
   { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO', image: '/projects/noozi/1.png' },
