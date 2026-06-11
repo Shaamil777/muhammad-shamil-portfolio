@@ -539,12 +539,12 @@ const projects: Record<string, ProjectData> = {
         },
         navigation: {
             prev: { slug: "urbanworn", title: "UrbanWorn" },
-            next: { slug: "cafco", title: "Cafco" }
+            next: { slug: "cafco", title: "Dravo" }
         }
     },
     cafco: {
         "slug": "cafco",
-        "title": "CAFCOHOME",
+        "title": "Dravo",
         "summary": "A sophisticated e-commerce platform for premium furniture featuring minimalist design, interactive product showcases, curated collections, and immersive shopping experiences with modern web technologies.",
         "badges": [
             { "label": "Type", "value": "E-commerce Platform" },
@@ -564,18 +564,18 @@ const projects: Record<string, ProjectData> = {
             "Lucide React Icons"
         ],
         "actions": [
-            { "label": "View Live Demo", "href": "#", "type": "primary" },
+            { "label": "View Live Demo", "href": "https://dravohome.com", "type": "primary" },
             { "label": "View Source Code", "href": "#", "type": "secondary" }
         ],
         "heroImage": "/public/herodesktop.jpg",
         "gallery": [
-            { "src": "/projects/cafco/01.webp", "alt": "Modern Furniture Hero", "type": "desktop" },
+            { "src": "/projects/cafco/01.png", "alt": "Modern Furniture Hero", "type": "desktop" },
             { "src": "/projects/cafco/02.webp", "alt": "Shop by Category", "type": "desktop" },
             { "src": "/projects/cafco/03.webp", "alt": "Trending Interiors & Products", "type": "desktop" },
             { "src": "/projects/cafco/04.webp", "alt": "Curated Collections", "type": "desktop" }
         ],
         "overview": {
-            "description": "CAFCOHOME is a premium furniture e-commerce platform built with Next.js 16 and React 19, showcasing modern luxury furniture through an immersive digital experience. The platform features sophisticated product categorization across 10 categories, 6 curated collections, and over 30 premium furniture pieces. Built with a minimalist luxury design philosophy, it incorporates advanced animations, smooth scrolling, and responsive design optimized for both desktop and mobile experiences.",
+            "description": "Dravo is a premium furniture e-commerce platform built with Next.js 16 and React 19, showcasing modern luxury furniture through an immersive digital experience. The platform features sophisticated product categorization across 10 categories, 6 curated collections, and over 30 premium furniture pieces. Built with a minimalist luxury design philosophy, it incorporates advanced animations, smooth scrolling, and responsive design optimized for both desktop and mobile experiences.",
             "audience": "Interior design enthusiasts, luxury furniture buyers, home decorators, architects, and design professionals seeking premium furniture pieces for residential and commercial spaces.",
             "goal": "To create an elegant digital showroom that captures the essence of modern luxury furniture while providing seamless browsing and shopping experiences that convert visitors into customers through sophisticated design and user experience."
         },
@@ -777,7 +777,7 @@ const projects: Record<string, ProjectData> = {
             ]
         },
         navigation: {
-            prev: { title: 'CAFCO', slug: 'cafco' },
+            prev: { title: 'DRAVO', slug: 'cafco' },
             next: { title: 'AI DOC CHAT', slug: 'aidocchat' }
         }
     },
@@ -1140,7 +1140,7 @@ const projects: Record<string, ProjectData> = {
             "Swiper.js"
         ],
         actions: [
-            { label: "View Live Demo", href: "#", type: "primary" },
+            { label: "View Live Demo", href: "https://noozi.in", type: "primary" },
             { label: "View Code", href: "#", type: "secondary" }
         ],
         heroImage: "/projects/noozi/1.png",

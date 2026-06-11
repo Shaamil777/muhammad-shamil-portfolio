@@ -15,7 +15,7 @@ const projects = [
   { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY', image: '/projects/opendoor/hero-section.webp' },
   { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT', image: null },
   { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES', image: '/projects/lapo/01.webp' },
-  { name: 'CAFCO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT', image: '/projects/cafco/01.webp' },
+  { name: 'DRAVO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT', image: '/projects/cafco/01.png' },
   { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE', image: null },
   { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION', image: '/projects/aidocchat/1.png' }
 ];
