@@ -7,15 +7,15 @@ import TransitionLink from '../components/TransitionLink';
 
 const projects = [
   { name: 'OJAS THEERAM', slug: 'ojastheeram', category: 'AYURVEDIC WELLNESS', image: '/projects/Ojas/1.png' },
+  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO', image: '/projects/noozi/1.png' },
+  { name: 'DRAVO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT', image: '/projects/cafco/01.png' },
+  { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES', image: '/projects/lapo/01.webp' },
+  { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY', image: '/projects/amritha/02.webp' },
+  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY', image: '/projects/opendoor/hero-section.webp' },
   { name: 'AUTONEXIS', slug: 'autonexis', category: 'EVENT-DRIVEN SYSTEMS', image: '/projects/AutoNexis/1.png' },
   { name: 'MICROSTORE', slug: 'microstore', category: 'MICROSERVICES ARCHITECTURE', image: null },
-  { name: 'NOOZI', slug: 'noozi', category: 'CREATIVE STUDIO', image: '/projects/noozi/1.png' },
   { name: 'DEVLOOM', slug: 'devloom', category: 'PUBLISHING PLATFORM', image: '/projects/devloom/1.png' },
-  { name: 'AMRITHA', slug: 'amrithaheritage', category: 'HOSPITALITY', image: '/projects/amritha/01.webp' },
-  { name: 'OPEN DOOR', slug: 'opendoor', category: 'EDUCATION CONSULTANCY', image: '/projects/opendoor/hero-section.webp' },
   { name: 'URBANWORN', slug: 'urbanworn', category: 'E-COMMERCE DEVELOPMENT', image: null },
-  { name: 'LAPO', slug: 'lapo', category: 'CAMPAIGN SERVICES', image: '/projects/lapo/01.webp' },
-  { name: 'DRAVO', slug: 'cafco', category: 'E-COMMERCE DEVELOPMENT', image: '/projects/cafco/01.png' },
   { name: 'EVENTO', slug: 'evento', category: 'EVENT VENUE', image: null },
   { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION', image: '/projects/aidocchat/1.png' }
 ];

@@ -85,8 +85,12 @@ export default function AboutPage() {
         {/* Right Section - Image */}
         <div className="about-right content-reveal about-reveal-3">
           <div className="about-image-container">
-            {/* Image placeholder — add your image here later */}
-            <div className="about-image" style={{ width: 400, height: 520, backgroundColor: '#1a1a18' }} />
+            <img 
+              src="/about/dp.JPG" 
+              alt="Profile" 
+              className="about-image object-cover" 
+              style={{ width: 400, height: 520, backgroundColor: '#1a1a18', borderRadius: '8px' }} 
+            />
           </div>
         </div>
       </div>
