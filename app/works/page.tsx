@@ -73,7 +73,7 @@ export default function Works() {
 
       {mounted && hoveredImage && createPortal(
         <div 
-          className="pointer-events-none fixed z-50 overflow-hidden rounded-lg shadow-2xl transition-transform duration-100 ease-out"
+          className="pointer-events-none fixed z-50 overflow-hidden rounded-lg shadow-2xl transition-transform duration-100 ease-out hidden md:block"
           style={{
             left: `${mousePos.x}px`,
             top: `${mousePos.y}px`,
