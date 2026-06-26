@@ -35,7 +35,10 @@ export const metadata: Metadata = {
     'Muhammad Shamil', 'MERN Stack Developer', 'Freelance Developer', 'Full-stack Developer', 'Web Developer', 'Portfolio',
     'React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js',
     'Web Development India', 'Freelance Web Developer', 'Freelance Web Developer in Kerala', 'Freelance Web Developer in Calicut',
-    'Web Designer Kerala', 'Software Developer Calicut', 'Frontend Developer', 'Backend Developer', 'React Developer Kerala', 'Next.js Developer India'
+    'Web Designer Kerala', 'Software Developer Calicut', 'Frontend Developer', 'Backend Developer', 'React Developer Kerala', 'Next.js Developer India',
+    'best developer in malappuram', 'full stack developer in malappuram', 'freelance developer in malappuram',
+    'frontend dev in malappuram', 'backend dev in malappuram', 'best freelance developer in malappuram',
+    'frontend developer in malappuram', 'backend developer in malappuram'
   ],
   authors: [{ name: 'Muhammad Shamil' }],
   creator: 'Muhammad Shamil',
