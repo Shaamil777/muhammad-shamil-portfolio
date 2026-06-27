@@ -1,9 +1,9 @@
 'use client';
 /* eslint-disable @next/next/no-img-element */
 
-import { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import { useState, useEffect, useCallback } from 'react';
 import TransitionLink from '../components/TransitionLink';
+import projectDataMap from './projectData';
 
 const projects = [
   { name: 'OJAS THEERAM', slug: 'ojastheeram', category: 'AYURVEDIC WELLNESS', image: '/projects/Ojas/1.png' },
@@ -20,76 +20,137 @@ const projects = [
   { name: 'AI DOC CHAT', slug: 'aidocchat', category: 'AI APPLICATION', image: '/projects/aidocchat/1.png' }
 ];
 
+const ITEMS_PER_PAGE = 4;
+const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
+
 export default function Works() {
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [mounted, setMounted] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMounted(true);
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
+    setVisible(true);
   }, []);
 
+  const goToPage = useCallback((page: number) => {
+    if (page === currentPage || page < 1 || page > totalPages) return;
+    setAnimating(true);
+
+    // Brief fade-out, then switch page and fade-in
+    setTimeout(() => {
+      setCurrentPage(page);
+      setAnimating(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 300);
+  }, [currentPage]);
+
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentProjects = projects.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
   return (
-    <div className="works-container">
-      <div className="works-left content-reveal works-reveal-1">
-        <h2 className="works-label">WORK</h2>
-        <p className="works-description">
-          This is a showcase of my best work in a variety
-          of fields including Graphic and Web Design,
-          No-Code Development, Product Design and
-          Product Management.
-        </p>
-        <p className="works-description works-description-secondary">
-          The world of digital design and development
-          is constantly evolving and so has my role
-          throughout my career.
+    <div className="works-page">
+      {/* Page header */}
+      <div className={`works-header ${visible ? 'works-animate' : ''}`}>
+        <span className="works-header-label">WORK</span>
+        <h1 className="works-header-title font-cormorant">Selected Projects</h1>
+        <p className="works-header-desc">
+          A showcase of my best work across web design, full-stack development,
+          and product engineering — each project tells a story.
         </p>
       </div>
 
-      <div className="works-right">
-        {projects.map((project, index) => (
-          <div 
-            key={project.slug} 
-            className={`works-project-item content-reveal works-reveal-${index + 1}`}
-            onMouseEnter={() => setHoveredImage(project.image)}
-            onMouseLeave={() => setHoveredImage(null)}
-          >
-            <TransitionLink href={`/works/${project.slug}`} className="works-project-name font-cormorant">
-              {project.name}
+      {/* Project cards */}
+      <div className={`works-list ${animating ? 'works-list-exit' : ''}`}>
+        {currentProjects.map((project, index) => {
+          const globalIndex = startIndex + index;
+          const detail = projectDataMap[project.slug];
+          const summary = detail?.summary || '';
+          const number = String(globalIndex + 1).padStart(2, '0');
+
+          return (
+            <TransitionLink
+              key={project.slug}
+              href={`/works/${project.slug}`}
+              className={`works-card ${visible && !animating ? 'works-animate' : ''}`}
+              style={{ animationDelay: `${0.1 + index * 0.1}s` }}
+            >
+              {/* Text side */}
+              <div className="works-card-text">
+                <span className="works-card-number font-cormorant">{number}</span>
+                <h2 className="works-card-name font-cormorant">{project.name}</h2>
+                <span className="works-card-category">— {project.category}</span>
+                {summary && (
+                  <p className="works-card-summary">{summary}</p>
+                )}
+                <span className="works-card-cta">
+                  View Project
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </div>
+
+              {/* Image side */}
+              <div className="works-card-image-wrap">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.name} preview`}
+                    className="works-card-image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="works-card-placeholder">
+                    <span className="works-card-placeholder-text font-cormorant">
+                      {project.name}
+                    </span>
+                    <span className="works-card-placeholder-sub">Backend Project</span>
+                  </div>
+                )}
+              </div>
             </TransitionLink>
-            <span className="works-project-category">– {project.category}</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {mounted && hoveredImage && createPortal(
-        <div 
-          className="pointer-events-none fixed z-50 overflow-hidden rounded-lg shadow-2xl transition-transform duration-100 ease-out hidden md:block"
-          style={{
-            left: `${mousePos.x}px`,
-            top: `${mousePos.y}px`,
-            transform: 'translate(-50%, -50%)',
-            width: '350px',
-            height: '250px'
-          }}
+      {/* Pagination */}
+      <div className={`works-pagination ${visible ? 'works-animate' : ''}`} style={{ animationDelay: '0.5s' }}>
+        <button
+          className="works-pagination-arrow"
+          onClick={() => goToPage(currentPage - 1)}
+          disabled={currentPage === 1}
+          aria-label="Previous page"
         >
-          <img 
-            src={hoveredImage} 
-            alt="Work preview" 
-            className="w-full h-full object-cover"
-          />
-        </div>,
-        document.body
-      )}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            className={`works-pagination-btn ${page === currentPage ? 'active' : ''}`}
+            onClick={() => goToPage(page)}
+            aria-label={`Page ${page}`}
+            aria-current={page === currentPage ? 'page' : undefined}
+          >
+            {String(page).padStart(2, '0')}
+          </button>
+        ))}
+
+        <button
+          className="works-pagination-arrow"
+          onClick={() => goToPage(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          aria-label="Next page"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }

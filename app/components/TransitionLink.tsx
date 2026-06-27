@@ -9,9 +9,10 @@ interface TransitionLinkProps {
     className?: string;
     color?: string;
     direction?: 'down' | 'up';
+    style?: React.CSSProperties;
 }
 
-export default function TransitionLink({ href, children, className, color, direction }: TransitionLinkProps) {
+export default function TransitionLink({ href, children, className, color, direction, style }: TransitionLinkProps) {
     const { startTransition, isTransitioning } = usePageTransition();
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -26,6 +27,7 @@ export default function TransitionLink({ href, children, className, color, direc
             href={href}
             onClick={handleClick}
             className={className}
+            style={style}
         >
             {children}
         </a>

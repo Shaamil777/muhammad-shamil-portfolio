@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond, Poppins } from "next/font/google";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 import DesktopNavigation from "./components/DesktopNavigation";
 import LoadingOverlay from "./components/LoadingOverlay";
@@ -28,10 +28,11 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const sugo = localFont({
-  src: '../public/fonts/sugo_pro_display/Sugo-Pro-Display-Light-trial.ttf',
-  variable: '--font-sugo',
-});
+// Sugo font files were removed — uncomment when font files are restored
+// const sugo = localFont({
+//   src: '../public/fonts/sugo_pro_display/Sugo-Pro-Display-Light-trial.ttf',
+//   variable: '--font-sugo',
+// });
 
 const siteUrl = 'https://muhammadshamil.vercel.app';
 
@@ -135,7 +136,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} ${poppins.variable} ${sugo.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} ${poppins.variable} antialiased`}
       >
         <PageTransitionProvider>
           <LoadingOverlay>
