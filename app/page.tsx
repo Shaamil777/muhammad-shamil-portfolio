@@ -23,8 +23,8 @@ export default function Home() {
       <div className="w-full md:w-1/2 p-8 pt-24 md:p-12 md:pt-110 flex items-center justify-center">
         <div className="max-w-md">
           <div className="mb-8" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-            <h2 className={`${r(1)} text-1xl mb-4 text-white font-normal font-[family-name:var(--font-geist-sans)]`}>
-              MUHAMMAD SHAMIL
+            <h2 className={`${r(1)} text-2xl mb-4 text-white font-light tracking-[0.15em] font-[family-name:var(--font-cormorant)]`}>
+              Muhammad Shamil
             </h2>
             <p className={`${r(2)} description-text text-md leading-relaxed`}>
               Full-stack software engineer specializing in scalable architectures and digital experiences. With a diverse portfolio spanning event-driven microservices, creative platforms, and robust e-commerce solutions, I build elegant, high-performance products from end to end.
