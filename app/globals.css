@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --token-e42f5e7f-eb84-44c9-935c-17b662e18b38: #1a1a18;
-  --framer-link-text-color: var(--token-885b6593-fb9a-4d84-95a1-02128525f6e8, #ddd8af);
+  --token-e42f5e7f-eb84-44c9-935c-17b662e18b38: #efff08;
+  --framer-link-text-color: var(--token-885b6593-fb9a-4d84-95a1-02128525f6e8, #000000);
 }
 
 body {
-  background-color: var(--token-e42f5e7f-eb84-44c9-935c-17b662e18b38, #1a1a18);
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--token-e42f5e7f-eb84-44c9-935c-17b662e18b38, #efff08);
+  color: #000000;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
@@ -702,7 +702,7 @@ body {
 .works-page {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--framer-link-text-color, #ddd8af);
+  background-color: var(--token-e42f5e7f-eb84-44c9-935c-17b662e18b38, #efff08);
   padding-left: 80px;
 }
 

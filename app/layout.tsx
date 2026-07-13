@@ -1,38 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cormorant_Garamond, Poppins } from "next/font/google";
-// import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import DesktopNavigation from "./components/DesktopNavigation";
 import LoadingOverlay from "./components/LoadingOverlay";
 import { PageTransitionProvider } from "./components/PageTransition";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-// Sugo font files were removed — uncomment when font files are restored
-// const sugo = localFont({
-//   src: '../public/fonts/sugo_pro_display/Sugo-Pro-Display-Light-trial.ttf',
-//   variable: '--font-sugo',
-// });
 
 const siteUrl = 'https://muhammadshamil.vercel.app';
 
@@ -83,6 +59,9 @@ export const metadata: Metadata = {
     title: 'Muhammad Shamil — Full-stack Web Developer',
     description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
     images: ['/og-image.png'],
+  },
+  icons: {
+    icon: '/favicon.png',
   },
 };
 
@@ -135,9 +114,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} ${poppins.variable} antialiased`}
-      >
+      <body className={`${inter.variable} font-inter antialiased`}>
         <PageTransitionProvider>
           <LoadingOverlay>
             <DesktopNavigation />

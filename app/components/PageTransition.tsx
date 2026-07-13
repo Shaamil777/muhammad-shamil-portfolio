@@ -16,10 +16,10 @@ const TransitionContext = createContext<TransitionContextType>({
 export const usePageTransition = () => useContext(TransitionContext);
 
 const pageColors: Record<string, string> = {
-    '/about': '#ddd8af',
-    '/works': '#ddd8af',
-    '/contact': '#ddd8af',
-    '/': '#1a1a18',
+    '/about': '#000000',
+    '/works': '#000000',
+    '/contact': '#000000',
+    '/': '#000000',
 };
 
 const pageDirections: Record<string, 'down' | 'up'> = {
@@ -37,7 +37,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
     const router = useRouter();
     const pathname = usePathname();
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [transitionColor, setTransitionColor] = useState('#ddd8af');
+    const [transitionColor, setTransitionColor] = useState('#000000');
     const [transitionDirection, setTransitionDirection] = useState<'down' | 'up'>('down');
     const [overlayState, setOverlayState] = useState<'hidden' | 'ready' | 'entering' | 'covering' | 'exiting'>('hidden');
     const previousPathRef = useRef(pathname);
@@ -46,7 +46,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
         if (href === pathname || isTransitioning) return;
 
         const isProjectDetail = href.startsWith('/works/') && href !== '/works';
-        const defaultColor = isProjectDetail ? '#1a1a18' : (pageColors[href] || '#ddd8af');
+        const defaultColor = isProjectDetail ? '#000000' : (pageColors[href] || '#000000');
         const defaultDirection = isProjectDetail ? 'down' : (pageDirections[href] || 'down');
 
         const newDirection = direction || defaultDirection;

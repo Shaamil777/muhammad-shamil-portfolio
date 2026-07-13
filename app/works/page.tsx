@@ -52,9 +52,9 @@ export default function Works() {
     <div className="works-page">
       {/* Page header */}
       <div className={`works-header ${visible ? 'works-animate' : ''}`}>
-        <span className="works-header-label">WORK</span>
-        <h1 className="works-header-title font-cormorant">Selected Projects</h1>
-        <p className="works-header-desc">
+        <span className="works-header-label font-bold text-black tracking-widest" style={{ fontFamily: 'var(--font-inter)' }}>WORK</span>
+        <h1 className="works-header-title uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>Selected Projects</h1>
+        <p className="works-header-desc text-black font-semibold">
           A showcase of my best work across web design, full-stack development,
           and product engineering — each project tells a story.
         </p>
@@ -76,10 +76,10 @@ export default function Works() {
               style={{ animationDelay: `${0.1 + index * 0.1}s` }}
             >
               {/* Text side */}
-              <div className="works-card-text">
-                <span className="works-card-number font-cormorant">{number}</span>
-                <h2 className="works-card-name font-cormorant">{project.name}</h2>
-                <span className="works-card-category">— {project.category}</span>
+              <div className="works-card-text text-black">
+                <span className="works-card-number uppercase font-black italic tracking-widest" style={{ fontFamily: 'var(--font-inter)' }}>{number}</span>
+                <h2 className="works-card-name uppercase font-black italic tracking-widest" style={{ fontFamily: 'var(--font-inter)' }}>{project.name}</h2>
+                <span className="works-card-category font-bold tracking-widest uppercase">— {project.category}</span>
                 {summary && (
                   <p className="works-card-summary">{summary}</p>
                 )}
@@ -102,11 +102,11 @@ export default function Works() {
                     loading="lazy"
                   />
                 ) : (
-                  <div className="works-card-placeholder">
-                    <span className="works-card-placeholder-text font-cormorant">
+                  <div className="works-card-placeholder border-4 border-black bg-yellow-400">
+                    <span className="works-card-placeholder-text uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>
                       {project.name}
                     </span>
-                    <span className="works-card-placeholder-sub">Backend Project</span>
+                    <span className="works-card-placeholder-sub text-black font-bold uppercase tracking-widest">Backend Project</span>
                   </div>
                 )}
               </div>

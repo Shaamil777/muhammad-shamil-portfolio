@@ -10,51 +10,28 @@ export default function AboutPage() {
       <div className="about-content">
         {/* Left Section - Title and Notes */}
         <div className="about-left pl-0 md:pl-30">
-          <h1 className="about-title font-cormorant content-reveal about-reveal-1">About</h1>
-
-          <h2 className="about-subtitle font-cormorant content-reveal about-reveal-2">
-            I design and build full-stack web applications for real-world use.
-          </h2>
-
           <div className="about-notes content-reveal about-reveal-3">
-            <p className="about-paragraph">
-              I started building software in 2023, driven by curiosity and a determination to understand how the web works end to end. What began with learning core programming concepts and building small projects quickly turned into designing and developing real websites and applications. I wasn't interested in just learning syntax—I wanted to build things that actually worked and could be used by others.
+            <p className="about-paragraph text-black font-semibold">
+              Every project starts with a simple question: How can this be better for the person using it? I enjoy building products that feel simple, fast, and reliable because that's what people remember—not the technology behind them.
             </p>
 
-            <p className="about-paragraph">
-              Over time, this led me into full-stack development and freelance work, where I've collaborated with small businesses, startups, and individuals. I've worked on e-commerce platforms, landing pages, business websites, and personal portfolios, handling both complete builds and specific parts of larger projects. My work spans frontend, backend, and databases, along with authentication, payments, APIs, and real-time features.
+            <p className="about-paragraph text-black font-semibold">
+              I'm Shamil. I love working with modern technologies, learning new stacks, and solving problems that push me to think differently. Building across the full stack lets me see the bigger picture, from the user experience on the frontend to the systems that power everything behind the scenes.
             </p>
 
-            <p className="about-paragraph">
-              What motivates me most is building clean, fast, and reliable web applications that serve a real purpose. I focus on clear UI, performance, and shipping efficiently—learning from real usage and improving through iteration. For me, development isn't about flashy demos or buzzwords, but about delivering practical solutions that work in the real world.
-            </p>
-          </div>
-
-          {/* Quote Section */}
-          <div className="about-quote-section content-reveal about-reveal-4">
-            <p className="about-quote-intro">
-              This is how I approach building software:
-            </p>
-
-            <blockquote className="about-quote font-cormorant">
-              "I don't build features just because they're possible.
-              I build only what needs to exist.""
-            </blockquote>
-
-            <p className="about-quote-explanation">
-              I'm not interested in writing code for the sake of complexity or visual appeal alone.
-              Every decision I make—architecture, features, performance—is driven by real use cases and real constraints. I focus on building software that solves actual problems, scales when needed, and delivers measurable value in the real world.
+            <p className="about-paragraph text-black font-semibold">
+              For me, success isn't measured by how much code I write or how many frameworks I know. It's measured by whether the final product makes life easier for users and gives clients confidence that they made the right choice. That's the kind of software I enjoy building.
             </p>
           </div>
 
           {/* Experience Section */}
           <div className="about-experience-section content-reveal about-reveal-5">
-            <h3 className="about-section-title font-cormorant">Experience</h3>
+            <h3 className="about-section-title uppercase font-black italic text-black tracking-widest" style={{ fontFamily: 'var(--font-inter)' }}>Experience</h3>
 
             <div className="about-experience-item">
               <h4 className="about-experience-degree">Self-Taught Full-Stack Developer</h4>
               <p className="about-experience-description">
-                1+ year of hands-on freelance experience building real-world web applications for small businesses, startups, and individual clients.
+                1.5+ years of hands-on freelance experience building real-world web applications for small businesses, startups, and individual clients.
               </p>
             </div>
 
@@ -74,25 +51,15 @@ export default function AboutPage() {
 
           {/* Skills Section */}
           <div className="about-skills-section content-reveal about-reveal-6">
-            <h3 className="about-section-title font-cormorant">Skills</h3>
+            <h3 className="about-section-title uppercase font-black italic text-black tracking-widest" style={{ fontFamily: 'var(--font-inter)' }}>Skills</h3>
 
             <p className="about-skills-list">
-              MERN Stack Development / JavaScript & TypeScript / React & Next.js / Node.js, Express.js & NestJS / Django REST API / MongoDB, PostgreSQL & Prisma ORM / REST API Development / Authentication (JWT, NextAuth, Roles) / State Management (Redux, Context API, TanStack Query) / Admin Dashboards & Role-Based Systems / UI & Animations (Tailwind CSS, Framer Motion, Lenis) / Payment Integration (Razorpay) / AI & Vector DBs (Gemini, ChromaDB, RAG) / Event-Driven Architecture (n8n) / Docker & Containerization / API Documentation (Swagger) / Data Validation (Zod) / Real-Time Features / Database Design / Git & Version Control / Deployment & Hosting (Vercel, Render, AWS, Nginx)
+              MERN Stack Development / JavaScript & TypeScript / React & Next.js / Node.js, Express.js & NestJS / Django REST API / MongoDB, PostgreSQL & Prisma ORM / REST API Development / Authentication (JWT, NextAuth, Roles) / State Management (Redux, Context API, TanStack Query) / Admin Dashboards & Role-Based Systems / UI & Animations (Tailwind CSS, Framer Motion, GSAP, Lenis, 3D Scroll Animations) / Payment Integration (Razorpay) / AI & Vector DBs (Gemini, ChromaDB, RAG) / Event-Driven Architecture (n8n) / Docker & Containerization / API Documentation (Swagger) / Data Validation (Zod) / Real-Time Features / Database Design / Git & Version Control / Deployment & Hosting (Vercel, Render, AWS, Nginx)
             </p>
           </div>
         </div>
 
-        {/* Right Section - Image */}
-        <div className="about-right content-reveal about-reveal-3">
-          <div className="about-image-container">
-            <img 
-              src="/about/dp.JPG" 
-              alt="Profile" 
-              className="about-image object-cover" 
-              style={{ width: 400, height: 520, backgroundColor: '#1a1a18', borderRadius: '8px' }} 
-            />
-          </div>
-        </div>
+
       </div>
     </div>
   )

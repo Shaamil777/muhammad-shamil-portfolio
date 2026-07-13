@@ -14,8 +14,8 @@ export default function ProjectDetail() {
         return (
             <div className="pd-container">
                 <div className="pd-not-found">
-                    <h1 className="pd-not-found-title font-cormorant">Project Not Found</h1>
-                    <p className="pd-not-found-text">The project you're looking for doesn't exist.</p>
+                    <h1 className="pd-not-found-title uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>Project Not Found</h1>
+                    <p className="pd-not-found-text font-bold text-black">The project you're looking for doesn't exist.</p>
                     <TransitionLink href="/works" className="pd-back-link">
                         ← Back to Works
                     </TransitionLink>
@@ -29,8 +29,8 @@ export default function ProjectDetail() {
 
             <section className="pd-hero" id="pd-hero">
                 <div className="pd-hero-inner">
-                    <p className="pd-hero-label content-reveal pd-reveal-1">PROJECT</p>
-                    <h1 className="pd-hero-title font-cormorant content-reveal pd-reveal-1">
+                    <p className="pd-hero-label content-reveal pd-reveal-1 font-bold text-black tracking-widest uppercase">PROJECT</p>
+                    <h1 className="pd-hero-title content-reveal pd-reveal-1 uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>
                         {project.title}
                     </h1>
                     <p className="pd-hero-summary content-reveal pd-reveal-2">
@@ -104,8 +104,8 @@ export default function ProjectDetail() {
 
                 <section className="pd-section" id="pd-overview">
                     <div className="pd-section-header">
-                        <span className="pd-section-number">01</span>
-                        <h2 className="pd-section-title font-cormorant">Project Overview</h2>
+                        <span className="pd-section-number font-bold text-black">01</span>
+                        <h2 className="pd-section-title uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>Project Overview</h2>
                     </div>
                     <div className="pd-section-body pd-overview-grid">
                         <div className="pd-overview-main">
@@ -128,8 +128,8 @@ export default function ProjectDetail() {
 
                 <section className="pd-section" id="pd-features">
                     <div className="pd-section-header">
-                        <span className="pd-section-number">02</span>
-                        <h2 className="pd-section-title font-cormorant">Key Features</h2>
+                        <span className="pd-section-number font-bold text-black">02</span>
+                        <h2 className="pd-section-title uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>Key Features</h2>
                     </div>
                     <div className="pd-section-body">
                         <div className="pd-features-grid">
@@ -146,8 +146,8 @@ export default function ProjectDetail() {
 
                 <section className="pd-section" id="pd-stack">
                     <div className="pd-section-header">
-                        <span className="pd-section-number">03</span>
-                        <h2 className="pd-section-title font-cormorant">Technology Stack</h2>
+                        <span className="pd-section-number font-bold text-black">03</span>
+                        <h2 className="pd-section-title uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>Technology Stack</h2>
                     </div>
                     <div className="pd-section-body">
                         <div className="pd-stack-grid">
@@ -177,8 +177,8 @@ export default function ProjectDetail() {
                         <div className="pd-nav-side pd-nav-prev">
                             {project.navigation.prev ? (
                                 <TransitionLink href={`/works/${project.navigation.prev.slug}`} className="pd-nav-link">
-                                    <span className="pd-nav-direction">← Previous Project</span>
-                                    <span className="pd-nav-project-name font-cormorant">
+                                    <span className="pd-nav-direction font-bold text-black tracking-widest uppercase">← Previous Project</span>
+                                    <span className="pd-nav-project-name uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>
                                         {project.navigation.prev.title}
                                     </span>
                                 </TransitionLink>
@@ -194,8 +194,8 @@ export default function ProjectDetail() {
                         <div className="pd-nav-side pd-nav-next">
                             {project.navigation.next ? (
                                 <TransitionLink href={`/works/${project.navigation.next.slug}`} className="pd-nav-link pd-nav-link-next">
-                                    <span className="pd-nav-direction">Next Project →</span>
-                                    <span className="pd-nav-project-name font-cormorant">
+                                    <span className="pd-nav-direction font-bold text-black tracking-widest uppercase">Next Project →</span>
+                                    <span className="pd-nav-project-name uppercase font-black italic text-black" style={{ fontFamily: 'var(--font-inter)' }}>
                                         {project.navigation.next.title}
                                     </span>
                                 </TransitionLink>

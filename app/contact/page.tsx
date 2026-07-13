@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="contact-container">
       {/* Large Hello Title */}
-      <h1 className="contact-title content-reveal contact-reveal-1 font-cormorant">
+      <h1 className="contact-title content-reveal contact-reveal-1 uppercase font-black italic text-black tracking-widest" style={{ fontFamily: 'var(--font-inter)' }}>
         Hello.
       </h1>
 
