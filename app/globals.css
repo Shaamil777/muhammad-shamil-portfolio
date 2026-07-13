@@ -996,6 +996,24 @@ body {
   cursor: not-allowed;
 }
 
+/* Fix for text visibility on desktop works page */
+@media (min-width: 769px) {
+  .works-header-title,
+  .works-header-desc,
+  .works-header-label,
+  .works-card-number,
+  .works-card-name,
+  .works-card-category,
+  .works-card-summary,
+  .works-card-cta,
+  .works-card-placeholder-text,
+  .works-card-placeholder-sub,
+  .works-pagination-btn,
+  .works-pagination-arrow {
+    color: #000 !important;
+  }
+}
+
 /* Responsive adjustments - outside layer for media queries */
 @media (max-width: 1024px) {
   .about-content {
