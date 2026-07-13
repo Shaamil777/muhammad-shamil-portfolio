@@ -1122,6 +1122,22 @@ body {
     padding-left: 0;
   }
 
+  /* Fix for text visibility on mobile works page */
+  .works-header-title,
+  .works-header-desc,
+  .works-header-label,
+  .works-card-number,
+  .works-card-name,
+  .works-card-category,
+  .works-card-summary,
+  .works-card-cta,
+  .works-card-placeholder-text,
+  .works-card-placeholder-sub,
+  .works-pagination-btn,
+  .works-pagination-arrow {
+    color: #000 !important;
+  }
+
   .works-header {
     padding: 80px 24px 36px 24px;
   }
