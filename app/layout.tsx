@@ -4,6 +4,7 @@ import "./globals.css";
 import DesktopNavigation from "./components/DesktopNavigation";
 import LoadingOverlay from "./components/LoadingOverlay";
 import { PageTransitionProvider } from "./components/PageTransition";
+import ClarityProvider from "./components/ClarityProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -103,6 +104,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-inter antialiased`}>
+              <ClarityProvider />
         <PageTransitionProvider>
           <LoadingOverlay>
             <DesktopNavigation />
