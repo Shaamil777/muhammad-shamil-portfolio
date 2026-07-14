@@ -43,14 +43,6 @@ export const metadata: Metadata = {
     title: 'Muhammad Shamil — Full-stack Web Developer',
     description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
     siteName: 'Muhammad Shamil — Portfolio',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Muhammad Shamil — Full-stack Web Developer Portfolio',
-      },
-    ],
     locale: 'en_US',
   },
 
@@ -58,10 +50,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Muhammad Shamil — Full-stack Web Developer',
     description: 'Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.',
-    images: ['/og-image.png'],
-  },
-  icons: {
-    icon: '/favicon.png',
   },
 };
 
